@@ -2,8 +2,8 @@ class PostsController < ApplicationController
     
     #shallow blah blah
     def index
-        if params[:id_user]
-            user = User.find(params[:id_user])
+        if params[:user_id]
+            user = User.find(params[:user_id])
             posts = user.post.all
         else
             posts = Post.all
@@ -12,13 +12,13 @@ class PostsController < ApplicationController
     end
     
     def show
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         post = user.find(params[:id])
         render json: post, state: :ok
     end
     
     def create
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         post = user.create(post_params)
         if post
             render json: post, status: :created
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     end
 
     def update
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         post = user.posts.find(params[:id])
         post.update(post_params)
         if post.update(post_params)
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
     end
     
     def destroy
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         post = user.posts.find(params[:id])
         post.destroy()
         if post.destroyed?
