@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :memes, shallow: true
   end
+  resources :posts
 end
