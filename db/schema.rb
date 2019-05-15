@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_034320) do
+ActiveRecord::Schema.define(version: 2019_05_15_071656) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_05_14_034320) do
     t.integer "meme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "body"
     t.index ["meme_id"], name: "index_post_memes_on_meme_id"
     t.index ["post_id"], name: "index_post_memes_on_post_id"
   end

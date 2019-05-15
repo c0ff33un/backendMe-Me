@@ -1,14 +1,30 @@
 class MemesController < ApplicationController
+    
+    def user_param
+        params[:id_user]
+    end
+
+
     def index
-        user = User.find(params[:id_user])
-        memes = user.memes.all
+        #shouldn't be necessary due to shallow paths
+        if user_param
+            user = User.find(params[:id_user])
+            memes = user.memes.all
+        else
+            memes = Meme.all
+        end
         render json: memes, status: :ok
     end
+    
     def show
-        user = User.find(params[:id_user])
-        meme = user.memes.find(params[:id])
+        if user_param
+            user = User.find(params[:id_user])
+        else
+            meme = Meme.find(params[:id])
+        end
         render json: meme, status: :ok
     end
+    
     def create
         user = User.find(params[:id_user])
         meme = user.memes.create(meme_params)
@@ -18,16 +34,17 @@ class MemesController < ApplicationController
             render json: meme.errors, status: :unprocessable_entity
         end
     end
+    
     def update
         user = User.find(params[:id_user])
         meme = user.memes.find(params[:id])
-        meme.update(meme_params)
         if meme.update(meme_params)
             render json: meme, status: :ok
         else
             render json: meme.errors, status: :unprocessable_entity
         end
     end
+    
     def destroy
         user = User.find(params[:id_user])
         meme = user.memes.find(params[:id])
@@ -36,10 +53,13 @@ class MemesController < ApplicationController
             render json: meme, status: :ok
         else
             render json: meme.errors, status: :unprocessable_entity
+        end
     end
 
     private
-    def meme_params()
-        params.require(:meme).permit(:image)
-    end
+    
+        def meme_params
+            params.require(:meme).permit(:image)
+        end
+    
 end

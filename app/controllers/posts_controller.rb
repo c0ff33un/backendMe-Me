@@ -1,14 +1,22 @@
 class PostsController < ApplicationController
+    
+    #shallow blah blah
     def index
-        user = User.find(params[:id_user])
-        posts = user.post.all
+        if params[:id_user]
+            user = User.find(params[:id_user])
+            posts = user.post.all
+        else
+            posts = Post.all
+        end
         render json: posts, status: :ok
     end
+    
     def show
         user = User.find(params[:id_user])
         post = user.find(params[:id])
         render json: post, state: :ok
     end
+    
     def create
         user = User.find(params[:id_user])
         post = user.create(post_params)
@@ -18,6 +26,7 @@ class PostsController < ApplicationController
             render json: post.errors, status: :unprocessable_entity
         end
     end
+
     def update
         user = User.find(params[:id_user])
         post = user.posts.find(params[:id])
@@ -26,7 +35,9 @@ class PostsController < ApplicationController
             render json: post, status: :ok
         else
             render json: post.errors, status: :unprocessable_entity
+        end
     end
+    
     def destroy
         user = User.find(params[:id_user])
         post = user.posts.find(params[:id])
@@ -39,7 +50,7 @@ class PostsController < ApplicationController
     end
 
     private
-    def post_params
-        params.require(:post).permit(:text)
-    end
+        def post_params
+            params.require(:post).permit(:text)
+        end
 end
