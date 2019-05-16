@@ -1,14 +1,14 @@
 class MemesController < ApplicationController
     
     def user_param
-        params[:id_user]
+        params[:user_id]
     end
 
 
     def index
         #shouldn't be necessary due to shallow paths
         if user_param
-            user = User.find(params[:id_user])
+            user = User.find(params[:user_id])
             memes = user.memes.all
         else
             memes = Meme.all
@@ -18,7 +18,7 @@ class MemesController < ApplicationController
     
     def show
         if user_param
-            user = User.find(params[:id_user])
+            user = User.find(params[:user_id])
         else
             meme = Meme.find(params[:id])
         end
@@ -26,7 +26,7 @@ class MemesController < ApplicationController
     end
     
     def create
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         meme = user.memes.create(meme_params)
         if meme
             render json: meme, status: :created
@@ -36,7 +36,7 @@ class MemesController < ApplicationController
     end
     
     def update
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         meme = user.memes.find(params[:id])
         if meme.update(meme_params)
             render json: meme, status: :ok
@@ -46,7 +46,7 @@ class MemesController < ApplicationController
     end
     
     def destroy
-        user = User.find(params[:id_user])
+        user = User.find(params[:user_id])
         meme = user.memes.find(params[:id])
         meme.destroy
         if meme.destroyed?

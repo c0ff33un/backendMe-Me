@@ -13,7 +13,7 @@ class PostMemesController < ApplicationController
 	#should only be created through post 
 	#meme should already be created
 	def create
-		post = Post.find(params[:id_post])
+		post = Post.find(params[:post_id])
 		post_meme = post.post_memes.create(post_meme_params)
 		if(post_meme)
 			render json: post_meme, status: :ok
@@ -23,7 +23,7 @@ class PostMemesController < ApplicationController
 	end
 
 	def update
-		post = Post.find(params[:id_post])
+		post = Post.find(params[:post_id])
 		post_meme = post.find(params[:id])
 		if post_meme.update(post_meme_params)
 			render json: post_meme, status: :ok
@@ -33,7 +33,7 @@ class PostMemesController < ApplicationController
 	end
 	
 	def destroy
-		post = Post.find(params[:id_post])
+		post = Post.find(params[:post_id])
 		post_meme = post.find(params[:id])
 		post_meme.destroy
 	end
