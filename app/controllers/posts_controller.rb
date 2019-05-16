@@ -30,7 +30,6 @@ class PostsController < ApplicationController
     def update
         user = User.find(params[:id_user])
         post = user.posts.find(params[:id])
-        post.update(post_params)
         if post.update(post_params)
             render json: post, status: :ok
         else
