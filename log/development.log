@@ -588,3 +588,1205 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jhonnyzaz/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "royce.grady"], ["age", 28], ["pass", "OnSyV2Ok"], ["password_salt", "3n68JqGs"], ["created_at", "2019-05-17 05:24:39.889123"], ["updated_at", "2019-05-17 05:24:39.889123"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (88.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "rudolph"], ["age", 35], ["pass", "9zR2Qg9jV6VnW6Uc"], ["password_salt", "D7PgC5Gr3eKq412c"], ["created_at", "2019-05-17 05:24:39.984818"], ["updated_at", "2019-05-17 05:24:39.984818"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (68.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "lucilla"], ["age", 59], ["pass", "HwPdL9Xe1yY7"], ["password_salt", "YcL80mMlU9Z0H3Cx"], ["created_at", "2019-05-17 05:24:40.063951"], ["updated_at", "2019-05-17 05:24:40.063951"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "harry_gusikowski"], ["age", 33], ["pass", "XjYiPuX5"], ["password_salt", "3j22RiCcWu4wHa59"], ["created_at", "2019-05-17 05:24:40.141012"], ["updated_at", "2019-05-17 05:24:40.141012"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (90.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "marcelino"], ["age", 25], ["pass", "V35vEvXmEaDiZuO8"], ["password_salt", "XoJ378P1Rk"], ["created_at", "2019-05-17 05:24:40.242321"], ["updated_at", "2019-05-17 05:24:40.242321"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (53.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "an_will"], ["age", 36], ["pass", "St0b1q3pZy5cIaNb"], ["password_salt", "SrHySpLhFx"], ["created_at", "2019-05-17 05:24:40.307077"], ["updated_at", "2019-05-17 05:24:40.307077"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (59.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "shara.rippin"], ["age", 21], ["pass", "K03oVy1dDuMf2c"], ["password_salt", "DqGrQtEpPb"], ["created_at", "2019-05-17 05:24:40.374000"], ["updated_at", "2019-05-17 05:24:40.374000"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (92.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "robbi"], ["age", 30], ["pass", "F7Y0DtPc5c37EfQ"], ["password_salt", "SfVr5j7oZvP4RnNz"], ["created_at", "2019-05-17 05:24:40.476023"], ["updated_at", "2019-05-17 05:24:40.476023"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (79.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "guadalupe_hettinger"], ["age", 27], ["pass", "Jh5bHh2yD5EnTgZh"], ["password_salt", "Wk5q2jRl17FtPc46"], ["created_at", "2019-05-17 05:24:40.559061"], ["updated_at", "2019-05-17 05:24:40.559061"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (73.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "otto"], ["age", 22], ["pass", "TqPjMcYxB83"], ["password_salt", "BrZvWy23E5L7E9"], ["created_at", "2019-05-17 05:24:40.640450"], ["updated_at", "2019-05-17 05:24:40.640450"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (57.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "keenan"], ["age", 15], ["pass", "RyD5G2RjJb1u25U"], ["password_salt", "M40eItJaIf7xUp"], ["created_at", "2019-05-17 05:24:40.706721"], ["updated_at", "2019-05-17 05:24:40.706721"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (93.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "dina"], ["age", 34], ["pass", "Ju9rL996JvTz1p"], ["password_salt", "QrT4EsQ9OjDcWx"], ["created_at", "2019-05-17 05:24:40.807763"], ["updated_at", "2019-05-17 05:24:40.807763"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (89.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "jackie_reichel"], ["age", 44], ["pass", "9aGnQ18qRiXtWcI"], ["password_salt", "Qi8wGmUjPrVe2"], ["created_at", "2019-05-17 05:24:40.909883"], ["updated_at", "2019-05-17 05:24:40.909883"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (85.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "rebbecca.denesik"], ["age", 39], ["pass", "SqWqUfId7qYaR4Dw"], ["password_salt", "IrJh24FxFfM1"], ["created_at", "2019-05-17 05:24:41.009343"], ["updated_at", "2019-05-17 05:24:41.009343"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (86.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("handle", "age", "pass", "password_salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["handle", "porter"], ["age", 39], ["pass", "FdMzO03c"], ["password_salt", "8dJ681M36"], ["created_at", "2019-05-17 05:24:41.110665"], ["updated_at", "2019-05-17 05:24:41.110665"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (99.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (1.2ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 15], ["image", "<59 bytes of binary data>"], ["created_at", "2019-05-17 05:24:41.290869"], ["updated_at", "2019-05-17 05:24:41.290869"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (88.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.9ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "<58 bytes of binary data>"], ["created_at", "2019-05-17 05:24:41.392141"], ["updated_at", "2019-05-17 05:24:41.392141"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (72.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.9ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["image", "<60 bytes of binary data>"], ["created_at", "2019-05-17 05:24:41.481587"], ["updated_at", "2019-05-17 05:24:41.481587"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (93.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (1.1ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 14], ["image", "<62 bytes of binary data>"], ["created_at", "2019-05-17 05:24:41.592567"], ["updated_at", "2019-05-17 05:24:41.592567"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (543.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.8ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 11], ["image", "<61 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.148612"], ["updated_at", "2019-05-17 05:24:42.148612"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (95.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.7ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 14], ["image", "<58 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.256006"], ["updated_at", "2019-05-17 05:24:42.256006"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (73.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.8ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "<70 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.344815"], ["updated_at", "2019-05-17 05:24:42.344815"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (72.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.8ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 8], ["image", "<59 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.433450"], ["updated_at", "2019-05-17 05:24:42.433450"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (61.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (2.3ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "<74 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.511400"], ["updated_at", "2019-05-17 05:24:42.511400"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.9ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 7], ["image", "<61 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.601510"], ["updated_at", "2019-05-17 05:24:42.601510"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (86.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.9ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 10], ["image", "<66 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.702756"], ["updated_at", "2019-05-17 05:24:42.702756"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (93.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.7ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 11], ["image", "<58 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.812125"], ["updated_at", "2019-05-17 05:24:42.812125"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (62.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (2.1ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 15], ["image", "<66 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.889142"], ["updated_at", "2019-05-17 05:24:42.889142"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (85.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (0.7ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["image", "<61 bytes of binary data>"], ["created_at", "2019-05-17 05:24:42.989219"], ["updated_at", "2019-05-17 05:24:42.989219"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (85.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "memes" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "<65 bytes of binary data>"], ["created_at", "2019-05-17 05:24:43.091232"], ["updated_at", "2019-05-17 05:24:43.091232"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (85.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 15], ["body", "Et dolores iusto sunt."], ["created_at", "2019-05-17 05:24:43.221970"], ["updated_at", "2019-05-17 05:24:43.221970"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (68.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (2.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["body", "Architecto placeat assumenda officia."], ["created_at", "2019-05-17 05:24:43.303156"], ["updated_at", "2019-05-17 05:24:43.303156"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (80.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (2.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 12], ["body", "Rerum quam labore est."], ["created_at", "2019-05-17 05:24:43.404568"], ["updated_at", "2019-05-17 05:24:43.404568"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 11], ["body", "Eius fugiat enim deleniti."], ["created_at", "2019-05-17 05:24:43.513272"], ["updated_at", "2019-05-17 05:24:43.513272"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (88.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["body", "Officia voluptatem eligendi quisquam."], ["created_at", "2019-05-17 05:24:43.615466"], ["updated_at", "2019-05-17 05:24:43.615466"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (62.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 11], ["body", "Quaerat modi corrupti cupiditate."], ["created_at", "2019-05-17 05:24:43.691137"], ["updated_at", "2019-05-17 05:24:43.691137"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (96.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["body", "Provident dolores ipsa minima."], ["created_at", "2019-05-17 05:24:43.805035"], ["updated_at", "2019-05-17 05:24:43.805035"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (97.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["body", "Aliquid eos et labore."], ["created_at", "2019-05-17 05:24:43.915178"], ["updated_at", "2019-05-17 05:24:43.915178"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (67.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 12], ["body", "Impedit in velit quas."], ["created_at", "2019-05-17 05:24:44.000691"], ["updated_at", "2019-05-17 05:24:44.000691"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (83.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["body", "Quae et aut at."], ["created_at", "2019-05-17 05:24:44.101247"], ["updated_at", "2019-05-17 05:24:44.101247"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (84.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 9], ["body", "Aliquam nobis nihil libero."], ["created_at", "2019-05-17 05:24:44.203345"], ["updated_at", "2019-05-17 05:24:44.203345"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (59.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 15], ["body", "Aut et tempore officiis."], ["created_at", "2019-05-17 05:24:44.280156"], ["updated_at", "2019-05-17 05:24:44.280156"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (73.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["body", "Error repudiandae aut ea."], ["created_at", "2019-05-17 05:24:44.368657"], ["updated_at", "2019-05-17 05:24:44.368657"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (70.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 13], ["body", "Porro quia dolores reiciendis."], ["created_at", "2019-05-17 05:24:44.460910"], ["updated_at", "2019-05-17 05:24:44.460910"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (87.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPost Create (3.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 10], ["body", "Corrupti soluta tempora dolorem."], ["created_at", "2019-05-17 05:24:44.570638"], ["updated_at", "2019-05-17 05:24:44.570638"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (67.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.4ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (0.9ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 11], ["meme_id", 2], ["reaction_type", 2], ["created_at", "2019-05-17 05:24:44.695569"], ["updated_at", "2019-05-17 05:24:44.695569"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (94.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["meme_id", 12], ["reaction_type", 4], ["created_at", "2019-05-17 05:24:44.807400"], ["updated_at", "2019-05-17 05:24:44.807400"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (53.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.1ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["meme_id", 13], ["reaction_type", 3], ["created_at", "2019-05-17 05:24:44.885585"], ["updated_at", "2019-05-17 05:24:44.885585"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (75.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 13], ["meme_id", 11], ["reaction_type", 3], ["created_at", "2019-05-17 05:24:44.984304"], ["updated_at", "2019-05-17 05:24:44.984304"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["meme_id", 6], ["reaction_type", 4], ["created_at", "2019-05-17 05:24:45.063787"], ["updated_at", "2019-05-17 05:24:45.063787"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (79.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (0.9ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 12], ["meme_id", 7], ["reaction_type", 4], ["created_at", "2019-05-17 05:24:45.161622"], ["updated_at", "2019-05-17 05:24:45.161622"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (81.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (0.9ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 9], ["meme_id", 14], ["reaction_type", 0], ["created_at", "2019-05-17 05:24:45.262699"], ["updated_at", "2019-05-17 05:24:45.262699"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (102.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (3.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["meme_id", 10], ["reaction_type", 0], ["created_at", "2019-05-17 05:24:45.386052"], ["updated_at", "2019-05-17 05:24:45.386052"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (84.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 13], ["meme_id", 5], ["reaction_type", 2], ["created_at", "2019-05-17 05:24:45.496297"], ["updated_at", "2019-05-17 05:24:45.496297"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (0.9ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 10], ["meme_id", 11], ["reaction_type", 1], ["created_at", "2019-05-17 05:24:45.596958"], ["updated_at", "2019-05-17 05:24:45.596958"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (77.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.7ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 11], ["meme_id", 12], ["reaction_type", 2], ["created_at", "2019-05-17 05:24:45.700416"], ["updated_at", "2019-05-17 05:24:45.700416"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (85.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.2ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 9], ["meme_id", 3], ["reaction_type", 3], ["created_at", "2019-05-17 05:24:45.807785"], ["updated_at", "2019-05-17 05:24:45.807785"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (76.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 14], ["meme_id", 3], ["reaction_type", 2], ["created_at", "2019-05-17 05:24:45.907317"], ["updated_at", "2019-05-17 05:24:45.907317"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (63.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (3.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["meme_id", 5], ["reaction_type", 0], ["created_at", "2019-05-17 05:24:45.996566"], ["updated_at", "2019-05-17 05:24:45.996566"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (85.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReaction Create (1.0ms)[0m  [1m[32mINSERT INTO "reactions" ("user_id", "meme_id", "reaction_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 15], ["meme_id", 1], ["reaction_type", 0], ["created_at", "2019-05-17 05:24:46.106387"], ["updated_at", "2019-05-17 05:24:46.106387"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (89.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (0.9ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 12], ["meme_id", 6], ["created_at", "2019-05-17 05:24:46.258879"], ["updated_at", "2019-05-17 05:24:46.258879"], ["body", "Id quia expedita eos."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 6], ["meme_id", 13], ["created_at", "2019-05-17 05:24:46.341054"], ["updated_at", "2019-05-17 05:24:46.341054"], ["body", "Aliquam et et cupiditate."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (53.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 10], ["meme_id", 3], ["created_at", "2019-05-17 05:24:46.418761"], ["updated_at", "2019-05-17 05:24:46.418761"], ["body", "Alias exercitationem repudiandae sequi."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (95.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (2.3ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 11], ["meme_id", 15], ["created_at", "2019-05-17 05:24:46.530273"], ["updated_at", "2019-05-17 05:24:46.530273"], ["body", "Nam velit sit in."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 6], ["meme_id", 3], ["created_at", "2019-05-17 05:24:46.620178"], ["updated_at", "2019-05-17 05:24:46.620178"], ["body", "Eaque ut velit aut."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (67.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.2ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 10], ["meme_id", 3], ["created_at", "2019-05-17 05:24:46.709608"], ["updated_at", "2019-05-17 05:24:46.709608"], ["body", "Et a mollitia sit."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (85.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 15], ["meme_id", 7], ["created_at", "2019-05-17 05:24:46.819089"], ["updated_at", "2019-05-17 05:24:46.819089"], ["body", "Voluptates consequuntur animi iusto."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.3ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 2], ["meme_id", 11], ["created_at", "2019-05-17 05:24:46.920727"], ["updated_at", "2019-05-17 05:24:46.920727"], ["body", "Earum quis provident et."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (88.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 8], ["meme_id", 2], ["created_at", "2019-05-17 05:24:47.030201"], ["updated_at", "2019-05-17 05:24:47.030201"], ["body", "Fugit dolor distinctio tempora."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (63.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (2.7ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 4], ["meme_id", 6], ["created_at", "2019-05-17 05:24:47.128647"], ["updated_at", "2019-05-17 05:24:47.128647"], ["body", "Voluptatum soluta tempore harum."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (72.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 1], ["meme_id", 6], ["created_at", "2019-05-17 05:24:47.230779"], ["updated_at", "2019-05-17 05:24:47.230779"], ["body", "Dolor est non nulla."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (92.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.1ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 6], ["meme_id", 5], ["created_at", "2019-05-17 05:24:47.342764"], ["updated_at", "2019-05-17 05:24:47.342764"], ["body", "Voluptas hic cumque dolor."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (72.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.0ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 9], ["meme_id", 13], ["created_at", "2019-05-17 05:24:47.440844"], ["updated_at", "2019-05-17 05:24:47.440844"], ["body", "Repudiandae quis facere ut."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (63.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.3ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (2.5ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 13], ["meme_id", 7], ["created_at", "2019-05-17 05:24:47.529413"], ["updated_at", "2019-05-17 05:24:47.529413"], ["body", "Officiis enim culpa occaecati."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "memes"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeme Load (0.2ms)[0m  [1m[34mSELECT  "memes".* FROM "memes" WHERE "memes"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPostMeme Create (1.1ms)[0m  [1m[32mINSERT INTO "post_memes" ("post_id", "meme_id", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["post_id", 3], ["meme_id", 14], ["created_at", "2019-05-17 05:24:47.617601"], ["updated_at", "2019-05-17 05:24:47.617601"], ["body", "Officiis minima vel et."]]
+  ↳ db/seeds.rb:36
+  [1m[35m (87.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (2.7ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 6], ["commentable_type", "Post"], ["commentable_id", 2], ["body", "Omnis et molestias. Ea odio fuga. Rerum itaque delectus."], ["created_at", "2019-05-17 05:24:47.779133"], ["updated_at", "2019-05-17 05:24:47.779133"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (60.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.1ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.8ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 4], ["commentable_type", "PostMeme"], ["commentable_id", 8], ["body", "Tempora numquam ipsa. Voluptas quia consequuntur. Nulla odio ad."], ["created_at", "2019-05-17 05:24:47.869966"], ["updated_at", "2019-05-17 05:24:47.869966"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (81.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 10], ["commentable_type", "Post"], ["commentable_id", 4], ["body", "Eum corporis non. Omnis ipsum repellat. Ducimus qui doloribus."], ["created_at", "2019-05-17 05:24:47.977484"], ["updated_at", "2019-05-17 05:24:47.977484"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.7ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (3.1ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["commentable_type", "PostMeme"], ["commentable_id", 9], ["body", "Sequi at autem. Est laboriosam nobis. Voluptatem officiis sit."], ["created_at", "2019-05-17 05:24:48.090317"], ["updated_at", "2019-05-17 05:24:48.090317"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (67.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 11], ["commentable_type", "Post"], ["commentable_id", 12], ["body", "Amet consequatur facere. Impedit autem ad. Aut enim delectus."], ["created_at", "2019-05-17 05:24:48.186485"], ["updated_at", "2019-05-17 05:24:48.186485"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (71.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.8ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 13], ["commentable_type", "PostMeme"], ["commentable_id", 11], ["body", "Sequi sunt sunt. Eos porro sint. Non ipsa atque."], ["created_at", "2019-05-17 05:24:48.285470"], ["updated_at", "2019-05-17 05:24:48.285470"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (64.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["commentable_type", "Post"], ["commentable_id", 3], ["body", "Qui voluptatem aperiam. Et suscipit dolores. Est ab facere."], ["created_at", "2019-05-17 05:24:48.375988"], ["updated_at", "2019-05-17 05:24:48.375988"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.9ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (3.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["commentable_type", "PostMeme"], ["commentable_id", 11], ["body", "Ut odio est. Voluptatem hic qui. Aut nesciunt consequatur."], ["created_at", "2019-05-17 05:24:48.463769"], ["updated_at", "2019-05-17 05:24:48.463769"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (51.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.6ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["commentable_type", "Post"], ["commentable_id", 5], ["body", "Saepe sunt error. Autem neque accusantium. Voluptatum dolores cum."], ["created_at", "2019-05-17 05:24:48.542065"], ["updated_at", "2019-05-17 05:24:48.542065"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (76.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.0ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 13], ["commentable_type", "PostMeme"], ["commentable_id", 8], ["body", "Dolor omnis rem. Dolorum qui est. Aut libero explicabo."], ["created_at", "2019-05-17 05:24:48.645095"], ["updated_at", "2019-05-17 05:24:48.645095"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (83.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 4], ["commentable_type", "Post"], ["commentable_id", 6], ["body", "Tempore omnis magni. Nobis sunt qui. Reiciendis quibusdam minus."], ["created_at", "2019-05-17 05:24:48.753056"], ["updated_at", "2019-05-17 05:24:48.753056"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (167.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.1ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 6], ["commentable_type", "PostMeme"], ["commentable_id", 10], ["body", "Ducimus eius vel. Odit quia unde. Aut quae ut."], ["created_at", "2019-05-17 05:24:48.944599"], ["updated_at", "2019-05-17 05:24:48.944599"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (70.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.8ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 14], ["commentable_type", "Post"], ["commentable_id", 8], ["body", "Ad incidunt accusantium. Qui veniam cumque. Eveniet autem nesciunt."], ["created_at", "2019-05-17 05:24:49.047201"], ["updated_at", "2019-05-17 05:24:49.047201"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (82.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.8ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 6], ["commentable_type", "PostMeme"], ["commentable_id", 8], ["body", "Non non voluptates. Iure ipsa tenetur. Dolores fugiat at."], ["created_at", "2019-05-17 05:24:49.150741"], ["updated_at", "2019-05-17 05:24:49.150741"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (64.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 15], ["commentable_type", "Post"], ["commentable_id", 11], ["body", "Nihil nulla et. Earum labore omnis. Distinctio dolores quod."], ["created_at", "2019-05-17 05:24:49.242727"], ["updated_at", "2019-05-17 05:24:49.242727"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (94.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.1ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["commentable_type", "PostMeme"], ["commentable_id", 9], ["body", "Tenetur non eligendi. Veniam voluptas autem. Porro ut magni."], ["created_at", "2019-05-17 05:24:49.363405"], ["updated_at", "2019-05-17 05:24:49.363405"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (63.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (4.7ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 13], ["commentable_type", "Post"], ["commentable_id", 2], ["body", "Velit ut sit. Facere fuga qui. Est et aspernatur."], ["created_at", "2019-05-17 05:24:49.453355"], ["updated_at", "2019-05-17 05:24:49.453355"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (59.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.0ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 15], ["commentable_type", "PostMeme"], ["commentable_id", 1], ["body", "Ipsam et aut. Necessitatibus quam dolorem. Laborum expedita architecto."], ["created_at", "2019-05-17 05:24:49.545006"], ["updated_at", "2019-05-17 05:24:49.545006"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 5], ["commentable_type", "Post"], ["commentable_id", 8], ["body", "Odit aut totam. Praesentium labore amet. Ut adipisci modi."], ["created_at", "2019-05-17 05:24:49.640267"], ["updated_at", "2019-05-17 05:24:49.640267"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (79.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.0ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 14], ["commentable_type", "PostMeme"], ["commentable_id", 6], ["body", "Qui quo et. Voluptatem omnis eius. Maxime corrupti quia."], ["created_at", "2019-05-17 05:24:49.751685"], ["updated_at", "2019-05-17 05:24:49.751685"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (55.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["commentable_type", "Post"], ["commentable_id", 6], ["body", "Omnis possimus aut. Magni voluptatum nisi. Sit sint cupiditate."], ["created_at", "2019-05-17 05:24:49.830316"], ["updated_at", "2019-05-17 05:24:49.830316"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (217.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.8ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 11], ["commentable_type", "PostMeme"], ["commentable_id", 15], ["body", "Rem assumenda eligendi. Sint alias delectus. Libero quo est."], ["created_at", "2019-05-17 05:24:50.065210"], ["updated_at", "2019-05-17 05:24:50.065210"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (103.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["commentable_type", "Post"], ["commentable_id", 5], ["body", "Itaque et similique. Aut ea blanditiis. Enim eius et."], ["created_at", "2019-05-17 05:24:50.186484"], ["updated_at", "2019-05-17 05:24:50.186484"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (100.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.8ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 7], ["commentable_type", "PostMeme"], ["commentable_id", 5], ["body", "Necessitatibus laudantium non. Natus consectetur optio. Velit exercitationem earum."], ["created_at", "2019-05-17 05:24:50.310513"], ["updated_at", "2019-05-17 05:24:50.310513"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (98.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 15], ["commentable_type", "Post"], ["commentable_id", 7], ["body", "Aliquam id enim. Rerum consequatur perspiciatis. Aliquam ullam iste."], ["created_at", "2019-05-17 05:24:50.441967"], ["updated_at", "2019-05-17 05:24:50.441967"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (86.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.6ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["commentable_type", "PostMeme"], ["commentable_id", 8], ["body", "Eius enim beatae. Sunt sit sequi. In ad ipsum."], ["created_at", "2019-05-17 05:24:50.544596"], ["updated_at", "2019-05-17 05:24:50.544596"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (75.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 5], ["commentable_type", "Post"], ["commentable_id", 13], ["body", "Natus qui rerum. Officia et nesciunt. Consequatur sed similique."], ["created_at", "2019-05-17 05:24:50.628695"], ["updated_at", "2019-05-17 05:24:50.628695"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (106.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (1.0ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (2.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 8], ["commentable_type", "PostMeme"], ["commentable_id", 11], ["body", "Corporis vero atque. Ipsum voluptatum minima. Dolorem et eius."], ["created_at", "2019-05-17 05:24:50.774171"], ["updated_at", "2019-05-17 05:24:50.774171"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (94.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:46)
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (8.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 7], ["commentable_type", "Post"], ["commentable_id", 8], ["body", "Qui veritatis est. Minus ut ut. Repellat in sunt."], ["created_at", "2019-05-17 05:24:50.898091"], ["updated_at", "2019-05-17 05:24:50.898091"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (59.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:47
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from block in <top (required)> at /home/jhonnyzaz/Documents/UNAL/ProyectoFinal/backendMe-Me/db/seeds.rb:52)
+  [1m[36mPostMeme Load (0.3ms)[0m  [1m[34mSELECT  "post_memes".* FROM "post_memes" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "commentable_type", "commentable_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 14], ["commentable_type", "PostMeme"], ["commentable_id", 9], ["body", "Atque voluptatem quia. Nulla aut consequatur. Omnis molestiae neque."], ["created_at", "2019-05-17 05:24:50.984297"], ["updated_at", "2019-05-17 05:24:50.984297"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (180.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
