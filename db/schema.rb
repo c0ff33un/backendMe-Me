@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_071656) do
+ActiveRecord::Schema.define(version: 2019_05_17_173833) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -25,18 +25,26 @@ ActiveRecord::Schema.define(version: 2019_05_15_071656) do
 
   create_table "memes", force: :cascade do |t|
     t.integer "user_id"
-    t.binary "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_memes_on_user_id"
   end
 
+  create_table "pictures", force: :cascade do |t|
+    t.binary "image"
+    t.string "imageable_type"
+    t.integer "imageable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id"
+  end
+
   create_table "post_memes", force: :cascade do |t|
     t.integer "post_id"
     t.integer "meme_id"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "body"
     t.index ["meme_id"], name: "index_post_memes_on_meme_id"
     t.index ["post_id"], name: "index_post_memes_on_post_id"
   end
@@ -57,6 +65,12 @@ ActiveRecord::Schema.define(version: 2019_05_15_071656) do
     t.datetime "updated_at", null: false
     t.index ["meme_id"], name: "index_reactions_on_meme_id"
     t.index ["user_id"], name: "index_reactions_on_user_id"
+  end
+
+  create_table "templates", force: :cascade do |t|
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
