@@ -3,8 +3,8 @@
 #Fill User
 15.times do
     User.create(
-        handle: Faker::Internet.username,
-        age: Faker::Number.between(15,60),
+        handle: Faker::Internet.unique.username(5..20),
+        age: Faker::Number.between(15,99),
         pass: Faker::Internet.password,
         password_salt: Faker::Internet.password
     )
@@ -13,14 +13,20 @@ end
 #Fill Meme
 15.times do
     Meme.create(
-        user_id: rand(User.count) + 1
+        user_id: rand(User.count) + 1,
+        picture: Picture.create(
+            image: Faker::Avatar.image
+        )
     )
 end
 
 #Fill Template
 15.times do
     Template.create(
-        description: Faker::Lorem.paragraph
+        description: Faker::Lorem.paragraph,
+        picture: Picture.create(
+            image: Faker::Avatar.image
+        )
     )
 end
 
@@ -65,34 +71,5 @@ end
         user_id: rand(User.count) + 1,
         body: Faker::Lorem.paragraph
     )
-
-end
-
-#Fill Pictures
-15.times do
-
-    meme = Meme.order('RANDOM()').first
-    
-    if( meme.picture == nil )
-        meme.create_picture(
-            image: Faker::Avatar.image
-        )
-    end
-
-    user = User.order('RANDOM()').first
-    
-    if( user.picture == nil )
-        user.create_picture(
-            image: Faker::Avatar.image
-        )
-    end
-
-    template = Template.order('RANDOM()').first
-    
-    if( template.picture == nil )
-        template.create_picture(
-            image: Faker::Avatar.image
-        )
-    end
 
 end

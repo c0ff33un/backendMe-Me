@@ -1,4 +1,7 @@
 class Meme < ApplicationRecord
+  #validations
+  validates_associated :picture, :reactions, :post_memes
+  validates_presence_of :picture
   #1-1
   belongs_to :user
   has_one :picture, as: :imageable

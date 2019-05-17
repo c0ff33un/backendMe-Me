@@ -1,4 +1,8 @@
 class Post < ApplicationRecord
+  #validations
+  validates :body, length: {maximum: 125}
+  validates_associated :post_memes, :comments
+
   #1-1
   belongs_to :user
   #1-n
