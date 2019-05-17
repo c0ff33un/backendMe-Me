@@ -1,13 +1,7 @@
 class MemesController < ApplicationController
-    
-    def user_param
-        params[:user_id]
-    end
-
-
     def index
         #shouldn't be necessary due to shallow paths
-        if user_param
+        if params[:user_id]
             user = User.find(params[:user_id])
             memes = user.memes.all
         else
@@ -17,7 +11,7 @@ class MemesController < ApplicationController
     end
     
     def show
-        if user_param
+        if params[:user_id]
             user = User.find(params[:user_id])
         else
             meme = Meme.find(params[:id])

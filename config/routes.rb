@@ -5,15 +5,18 @@ Rails.application.routes.draw do
   	resources :comments
   end
   
+  concern :imageable do
+    resources :pictures
+  end
   concern :reactionable do
   	resources :reactions
   end
   
-  resources :users, concerns: [:commentable, :reactionable] do
+  resources :users, concerns: [:commentable, :reactionable, :imageable] do
   	resources :posts, :memes
   end
   
-  resources :memes, concerns: :reactionable do
+  resources :memes, concerns: [:reactionable, :imageable] do
   	resources :post_memes
   end
 
@@ -23,6 +26,6 @@ Rails.application.routes.draw do
 
   resources :post_memes, concerns: :commentable
   
-  resources :comments, :reactions
+  resources :comments, :reactions, :pictures, :templates
 
 end
