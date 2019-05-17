@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
     
-    #shallow blah blah
     def index
         if params[:user_id]
             user = User.find(params[:user_id])
-            posts = user.post.all
+            posts = user.posts.all
         else
             posts = Post.all
         end
@@ -12,8 +11,8 @@ class PostsController < ApplicationController
     end
     
     def show
-        user = User.find(params[:user_id])
-        post = user.find(params[:id])
+        # We just require post Id.
+        post = Post.find(params[:id])
         render json: post, state: :ok
     end
     

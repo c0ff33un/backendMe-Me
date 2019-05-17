@@ -3,7 +3,11 @@ class CommentsController < ApplicationController
 	before_action :load_commentable
 
 	def index
-		comments = @commentable.comments
+		if @commentable
+			comments = @commentable.comments
+		else
+			comments = Comment.all
+		end
 		render json: comments, status: :ok
 	end 
 
@@ -37,14 +41,17 @@ class CommentsController < ApplicationController
 	end
 
 	private 
-
-		def load_commentable
-			resource, id = request.path.split('/')[1,2]
+	def load_commentable
+		resource, id = request.path.split('/')[1,2]
+		if resource == "comments"
+			@commentable = nil
+		else
 			@commentable = resource.singularize.classify.constantize.find(id)
 		end
+	end
 
-		def comment_params
-			params.require(:comment).permit(:body)
-		end
+	def comment_params
+		params.require(:comment).permit(:body, :commentable_type)
+	end
 
 end
