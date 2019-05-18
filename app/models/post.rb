@@ -6,8 +6,8 @@ class Post < ApplicationRecord
   #1-1
   belongs_to :user
   #1-n
-  has_many :comments, as: :commentable
+  has_many :comments, as: :commentable, dependent: :destroy
   #n-n
-  has_many :post_memes
-  has_many :memes, through: :post_memes
+  has_many :post_memes, dependent: :destroy
+  has_many :memes, through: :post_memes, dependent: :destroy
 end

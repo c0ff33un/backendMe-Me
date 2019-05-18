@@ -27,7 +27,13 @@ class CommentsController < ApplicationController
 
 	
 	def update
-		comment = @commentable.comments.find(params[:id])
+		
+		if @commentable
+			comment = @commentable.comments.find(params[:id])
+		else 
+			comment = Comment.find(params[:id])
+		end
+		
 		if comment.update(comment_params)
 			render json: comment, status: :ok
 		else
@@ -36,8 +42,19 @@ class CommentsController < ApplicationController
 	end
 	
 	def destroy
-		comment = @commentable.comments.find(params[:id])
+
+		if @commentable
+			comment = @commentable.coments.find(params[:id])
+		else
+			comment = Comment.find(params[:id])
+		end
+		
 		comment.destroy
+		if comment.destroyed?
+            render json: comment, status: :ok
+        else
+            render json: comment.errors, status: :unprocessable_entity
+		end
 	end
 
 	private 
@@ -51,7 +68,7 @@ class CommentsController < ApplicationController
 	end
 
 	def comment_params
-		params.require(:comment).permit(:body)
+		params.require(:comment).permit(:user_id, :body)
 	end
 
 end

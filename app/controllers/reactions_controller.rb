@@ -1,7 +1,16 @@
 class ReactionsController < ApplicationController
 
+
+	before_action :load_reaction
+
 	def index
-		reactions = Reaction.all
+		puts( @reactionable.class )
+
+		if @reactionable
+			reactions = @reactionable.reactions.all
+		else
+			reactions = Reaction.all
+		end
 		render json: reactions, status: :ok
 	end 
 
@@ -15,6 +24,11 @@ class ReactionsController < ApplicationController
 	def create
 		user = User.find(params[:user_id])
 		reaction = user.reactions.create(reaction_params)
+		if reaction
+			render json: reaction, status: :created
+		else
+			render json: reaction.errors, status: :unprocessable_entity
+		end
 	end
 
 	def update
@@ -31,14 +45,26 @@ class ReactionsController < ApplicationController
 		user = User.find(params[:user_id])
 		reaction = user.reactions.find(params[:id])
 		reaction.destroy
+
+		if reaction.destroyed?
+            render json: reaction, status: :ok
+        else
+            render json: reaction.errors, status: :unprocessable_entity
+		end
 	end
 
 	private
-		
-		def reaction_params
-			params.require(:reaction).permit(:meme, :reaction_type)
+		def load_reaction
+			resource, id = request.path.split('/')[1,2]
+			if resource == "reactions"
+				@reactionable = nil
+			else
+				@reactionable = resource.singularize.classify.constantize.find(id)
+			end
 		end
-
-	
+			
+		def reaction_params
+			params.require(:reaction).permit(:meme_id, :reaction_type)
+		end
 
 end

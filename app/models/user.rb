@@ -10,12 +10,12 @@ class User < ApplicationRecord
 	validates_associated :memes, :posts, :comments, :reactions, :picture
 
 	#1-1
-	has_one :picture, as: :imageable
+	has_one :picture, as: :imageable, dependent: :destroy
 	#1-n
-	has_many :comments
-	has_many :memes
-	has_many :posts
+	has_many :comments, dependent: :destroy
+	has_many :memes, dependent: :destroy
+	has_many :posts, dependent: :destroy
 	#n-n
-	has_many :reactions
+	has_many :reactions, dependent: :destroy
 	#has_many :memes, through: :reactions
 end

@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     
     def create
         user = User.find(params[:user_id])
-        post = user.create(post_params)
+        post = user.posts.create(post_params)
         if post
             render json: post, status: :created
         else
@@ -41,14 +41,14 @@ class PostsController < ApplicationController
         post = user.posts.find(params[:id])
         post.destroy()
         if post.destroyed?
-            render plain: "Post destroyed", status: :ok
+            render json: post, status: :ok
         else
-            render post.errors, status: :unprocessable_entity
+            render json: post.errors, status: :unprocessable_entity
         end    
     end
 
     private
         def post_params
-            params.require(:post).permit(:text)
+            params.require(:post).permit(:body)
         end
 end
