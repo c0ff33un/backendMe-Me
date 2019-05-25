@@ -36,8 +36,7 @@ and
 when you want to push again actual master
 
 
-# Recreating databes on heroku
+# Recreating database on heroku
 
-	rake db:create
-	rake db:schema:load
-	rake db:migrate
+	db:schema:load
+	db:structure:load or db:migraterake db:migrate
