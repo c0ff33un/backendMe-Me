@@ -22,3 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+## Pushing non master branch to heroku
+
+		git push heroku feature/<feature>:master
+
+and
+
+		git push -f heroku master:master
+
+when you want to push again actual master
