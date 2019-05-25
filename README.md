@@ -27,10 +27,17 @@ Things you may want to cover:
 
 ## Pushing non master branch to heroku
 
-		git push heroku feature/<feature>:master
+	git push heroku feature/<feature>:master
 
 and
 
-		git push -f heroku master:master
+	git push -f heroku master:master
 
 when you want to push again actual master
+
+
+# Recreating databes on heroku
+
+	rake db:create
+	rake db:schema:load
+	rake db:migrate
