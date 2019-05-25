@@ -149,6 +149,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.7)
+  bcrypt (~> 3.1.12)
   bootsnap (>= 1.1.0)
   byebug
   faker (~> 1.9, >= 1.9.3)
