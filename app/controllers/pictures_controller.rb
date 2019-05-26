@@ -2,7 +2,6 @@ class PicturesController < ApplicationController
     before_action :load_imageable
 
     def index
-        puts @imageable.class
 		if @imageable
             images = @imageable.picture
 		else

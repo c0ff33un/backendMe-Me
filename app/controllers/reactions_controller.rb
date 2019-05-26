@@ -4,13 +4,7 @@ class ReactionsController < ApplicationController
 	before_action :load_reaction
 
 	def index
-		puts( @reactionable.class )
-
-		if @reactionable
-			reactions = @reactionable.reactions.all
-		else
-			reactions = Reaction.all
-		end
+		reactions = @reactionable.reactions.all
 		render json: reactions, status: :ok
 	end 
 
@@ -45,7 +39,6 @@ class ReactionsController < ApplicationController
 		user = User.find(params[:user_id])
 		reaction = user.reactions.find(params[:id])
 		reaction.destroy
-
 		if reaction.destroyed?
             render json: reaction, status: :ok
         else
@@ -56,11 +49,7 @@ class ReactionsController < ApplicationController
 	private
 		def load_reaction
 			resource, id = request.path.split('/')[1,2]
-			if resource == "reactions"
-				@reactionable = nil
-			else
-				@reactionable = resource.singularize.classify.constantize.find(id)
-			end
+			@reactionable = resource.singularize.classify.constantize.find(id)
 		end
 			
 		def reaction_params
