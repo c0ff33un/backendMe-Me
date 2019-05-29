@@ -43,10 +43,14 @@ when you want to push again actual master
 
 # Auth 
 
-* Autenticación usando devise y jwt-devise:
+* Auth using devise and jwt-devise:
 
 https://medium.com/@nandhae/2019-how-i-set-up-authentication-with-jwt-in-just-a-few-lines-of-code-with-rails-5-api-devise-9db7d3cee2c0
 
-* Argon2 es mejor que bcrypt.
+* Argon2 is bette than bcrypt.
 
 https://ankane.org/devise-argon2
+
+* Sendgrid on production
+
+https://stackoverflow.com/questions/44417596/action-mailer-production-rb-not-working-when-deployed-via-sendgrid-and-heroku
