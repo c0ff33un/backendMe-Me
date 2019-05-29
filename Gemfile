@@ -13,7 +13,7 @@ gem 'puma', '~> 3.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.12b'
+#gem 'bcrypt', '~> 3.1.12b'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -58,14 +58,18 @@ gem "will_paginate", "~> 3.1"
 
 gem "serializer", "~> 1.0"
 
-gem "knock", "~> 2.1"
+#gem "knock", "~> 2.1"
 
 gem "annotate", "~> 2.7"
+
+# Authentication
 
 gem "devise", "~> 4.6"
 
 gem "devise-jwt", "~> 0.4.1"
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+# encryption algorithm
 
 gem "argon2", "~> 2.0"
