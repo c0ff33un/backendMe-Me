@@ -61,3 +61,11 @@ gem "serializer", "~> 1.0"
 gem "knock", "~> 2.1"
 
 gem "annotate", "~> 2.7"
+
+gem "devise", "~> 4.6"
+
+gem "devise-jwt", "~> 0.4.1"
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+gem "argon2", "~> 2.0"

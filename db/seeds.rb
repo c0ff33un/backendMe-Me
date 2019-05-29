@@ -4,11 +4,12 @@
 15.times do
     User.create(
         handle: Faker::Internet.unique.username(5..20),
-        age: Faker::Number.between(15,99),
-        pass: Faker::Internet.password,
-        password_salt: Faker::Internet.password
+        email: Faker::Internet.unique.email,
+        password: Faker::Internet.password,
+        birthday: Faker::Date.birthday(min_age = 15, max_age = 125)
     )
 end
+
 
 #Fill Meme
 15.times do
