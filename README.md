@@ -40,3 +40,13 @@ when you want to push again actual master
 
 	db:schema:load
 	db:structure:load or db:migraterake db:migrate
+
+# Auth 
+
+* Autenticación usando devise y jwt-devise:
+
+https://medium.com/@nandhae/2019-how-i-set-up-authentication-with-jwt-in-just-a-few-lines-of-code-with-rails-5-api-devise-9db7d3cee2c0
+
+* Argon2 es mejor que bcrypt.
+
+https://ankane.org/devise-argon2
