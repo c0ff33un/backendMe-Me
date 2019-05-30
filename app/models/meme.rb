@@ -2,6 +2,7 @@ class Meme < ApplicationRecord
   #validations
   validates_associated :picture, :reactions, :post_memes
   validates_presence_of :picture
+
   #1-1
   belongs_to :user
   has_one :picture, as: :imageable, dependent: :destroy
@@ -11,4 +12,12 @@ class Meme < ApplicationRecord
   
   has_many :reactions, dependent: :destroy
   #has_many :users, through: :reactions
+
+  def self.filter( params )
+    results = self.where(nil)
+    
+    where('created_at >= ?', params[:upload_date] ) if params[:upload_date].present?
+
+    results
+  end
 end
