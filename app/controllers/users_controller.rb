@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(user_params)
-	if user.valid?
+        if user.valid?
             render json: user, status: :created
         else
             render json: user.errors, status: :unprocessable_entity
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     private
 
         def user_params
-            params.require(:user).permit(:handle, :birthday)
+            params.require(:user).permit(:handle, :birthday, :email, :password)
         end
         
 end

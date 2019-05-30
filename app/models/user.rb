@@ -22,6 +22,7 @@ class User < ApplicationRecord
 	private 
 
 		def birthday_in_range
+			birthday.inspect
 			if birthday > Time.now
 				errors.add(:birthday, "the future is now, old man")
 			elsif birthday < Time.now - 125.years

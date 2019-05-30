@@ -1,2 +1,4 @@
 /tmp
 .env
+/db/development.sqlite3
+/db/test.sqlite3

@@ -45,9 +45,15 @@ when you want to push again actual master
 
 * Auth using devise and jwt-devise:
 
-https://medium.com/@nandhae/2019-how-i-set-up-authentication-with-jwt-in-just-a-few-lines-of-code-with-rails-5-api-devise-9db7d3cee2c0
+[medium post, don't trust it all](https://medium.com/@nandhae/2019-how-i-set-up-authentication-with-jwt-in-just-a-few-lines-of-code-with-rails-5-api-devise-9db7d3cee2c0)
 
-* Argon2 is bette than bcrypt.
+[thinkster post, trust a little more](https://thinkster.io/tutorials/rails-json-api/setting-up-users-and-authentication-for-our-api)
+
+[devise-jwt](https://github.com/waiting-for-dev/devise-jwt)
+
+[configuring devise for apis](https://github.com/waiting-for-dev/devise-jwt/wiki/Configuring-devise-for-APIs)
+
+* Argon2 is better than bcrypt (gpu attack resitant).
 
 https://ankane.org/devise-argon2
 
