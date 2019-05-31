@@ -531,3 +531,122 @@ Processing by Devise::RegistrationsController#create as JSON
 Completed 422 Unprocessable Entity in 171ms (Views: 0.1ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/signup" for ::1 at 2019-05-31 16:33:45 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."handle" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/models/user.rb:26:in `birthday_in_range'
+Started POST "/signup" for ::1 at 2019-05-31 16:33:50 -0500
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."handle" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/models/user.rb:26:in `birthday_in_range'
+Started POST "/signup" for ::1 at 2019-05-31 16:34:02 -0500
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "handle"=>"testing", "birthday"=>"28-02-1998", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"testing@testing.com", "handle"=>"testing", "birthday"=>"28-02-1998", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."handle" = ? LIMIT ?[0m  [["handle", "testing"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("handle", "birthday", "created_at", "updated_at", "email", "encrypted_password", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["handle", "testing"], ["birthday", "1998-02-28"], ["created_at", "2019-05-31 21:34:02.460741"], ["updated_at", "2019-05-31 21:34:02.460741"], ["email", "testing@testing.com"], ["encrypted_password", "$argon2id$v=19$m=65536,t=2,p=1$CU1lDO1hKjtKB+o/hkKsow$pFzht9CvYyhSqyh0yYAyQT95T7OG3ScGJFaJL+pYag0"], ["confirmation_token", "U4tW3C65n-rc2W8XASPD"], ["confirmation_sent_at", "2019-05-31 21:34:02.460850"]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (48.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /home/mah/.rvm/gems/ruby-2.5.3/gems/devise-4.6.2/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/mah/.rvm/gems/ruby-2.5.3/gems/devise-4.6.2/app/views/devise/mailer/confirmation_instructions.html.erb (1.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 157.1ms
+Sent mail to testing@testing.com (3.3ms)
+Date: Fri, 31 May 2019 16:34:02 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: testing@testing.com
+Message-ID: <5cf19dcab7b9f_2a672af07767892c1043d@pop-os.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome testing@testing.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/confirmation?confirmation_token=U4tW3C65n-rc2W8XASPD">Confirm my account</a></p>
+
+Completed 201 Created in 491ms (Views: 0.4ms | ActiveRecord: 50.2ms)
+
+
+Started GET "/confirmation?confirmation_token=U4tW3C65n-rc2W8XASPD" for ::1 at 2019-05-31 16:34:08 -0500
+Processing by Devise::ConfirmationsController#show as JSON
+  Parameters: {"confirmation_token"=>"U4tW3C65n-rc2W8XASPD"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "U4tW3C65n-rc2W8XASPD"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2019-05-31 21:34:08.023175"], ["updated_at", "2019-05-31 21:34:08.023917"], ["id", 2]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (115.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/login
+Completed 302 Found in 125ms (ActiveRecord: 116.7ms)
+
+
+Started GET "/login" for ::1 at 2019-05-31 16:34:08 -0500
+Processing by Devise::SessionsController#new as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-31 16:34:22 -0500
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 157ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-05-31 16:34:23 -0500
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 168ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2019-05-31 16:34:25 -0500
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ /home/mah/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 143ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
