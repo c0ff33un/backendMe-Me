@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '0e705a1b343ab50f79d6446d910a562b788c8f7c0a0513f7992ef3080ad67c79ab7945b72166de2c0a91f5745dc08a41e1b212caf5a40b9fba11d016629ca2df'
+  # config.secret_key = ENV['DEVISE_SECRET_KEY']
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -70,7 +70,7 @@ Devise.setup do |config|
   # given strategies, for example, `config.http_authenticatable = [:database]` will
   # enable it only for database authentication. The supported strategies are:
   # :database      = Support basic authentication with authentication key + password
-  # config.http_authenticatable = false
+  config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
@@ -88,7 +88,7 @@ Devise.setup do |config|
   # Notice that if you are skipping storage for all authentication paths, you
   # may want to disable generating routes to Devise's sessions controller by
   # passing skip: :sessions to `devise_for` in your config/routes.rb
-  config.skip_session_storage = [:http_auth]
+  config.skip_session_storage = [:http_auth, :params_auth]
 
   # By default, Devise cleans up the CSRF token on authentication to
   # avoid CSRF token fixation attacks. This means that, when using AJAX
@@ -251,7 +251,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html]
+  # config.navigational_formats = ["*/*"]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -297,19 +297,25 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-  # api only
+  # ==> Configuration for devise-jwt
+
   config.navigational_formats = []
 
   config.jwt do |jwt|
-    jwt.secret = ENV['DEVISE_SECRET_KEY']
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
 
     jwt.dispatch_requests = [
-        ['POST', %r{^/login$}]
+        ['POST', %r{^/api/login$}],
+        ['GET',%r{^/$}]
       ]
-      jwt.revocation_requests = [
-        ['DELETE', %r{^/logout$}]
-      ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/api/logout$}]
+    ]
 
     jwt.expiration_time = 5.minutes.to_i
+
+    jwt.request_formats = {
+      user: [:json]
+    }
   end
 end

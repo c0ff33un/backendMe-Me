@@ -5,7 +5,7 @@ class User < ApplicationRecord
 	       :recoverable, :rememberable, :validatable,
 	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 	#validations
-	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true
+	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
 	validate :birthday_in_range
 	validates_associated :memes, :posts, :comments, :reactions, :picture
 
@@ -19,9 +19,15 @@ class User < ApplicationRecord
 	has_many :reactions, dependent: :destroy
 	#has_many :memes, through: :reactions
 
+	def generate_jwt
+		JWT.encode({id: id,
+								exp: 60.days.from_now.to_i},
+							Rails.application.credentials.secret_key_base)
+	end
 	private 
 
 		def birthday_in_range
+			birthday.inspect
 			if birthday > Time.now
 				errors.add(:birthday, "the future is now, old man")
 			elsif birthday < Time.now - 125.years
@@ -30,4 +36,5 @@ class User < ApplicationRecord
 				errors.add(:birthday, "too young for our memes")
 			end
 		end
+
 end
