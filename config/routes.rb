@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  scope :api do
-      
     devise_for :users, 
                 defaults: { format: :json }, 
                 path: '',
@@ -9,7 +7,7 @@ Rails.application.routes.draw do
                   { sign_in: 'login', 
                     sign_out: 'logout', 
                     registration: 'signup'}
-    
+
     resource :users, only: [:show, :update]
 
     concern :commentable do
@@ -37,5 +35,5 @@ Rails.application.routes.draw do
 
     resources :comments, only: [:show, :update, :destroy]
     resources :pictures, :templates
-  end 
+ 
 end
