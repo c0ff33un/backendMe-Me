@@ -1,18 +1,26 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  devise_for :users,
-             path: '',
-             path_names: {
+  scope :api, defaults: { format: :json } do
+    devise_for :users,
+        controllers: {sessions: :sessions},
+        path_names: {
                sign_in: 'login',
-               sign_out: 'logout',
-               registration: 'signup'
-             },
-             defaults: { format: :json }#,
-             # controllers: {
-             #   sessions: 'sessions',
-             #   registrations: 'registrations'
-             # }
+             }
+    resource :users, only: [:show, :update]
+  end
+
+  # devise_for :users,
+  #            path: '',
+  #            path_names: {
+  #              sign_in: 'login',
+  #              sign_out: 'logout',
+  #              registration: 'signup'
+  #            },
+  #            defaults: { format: :json }#,
+  #            # controllers: {
+  #            #   sessions: 'sessions',
+  #            #   registrations: 'registrations'
+  #            # }
   
   concern :commentable do
   	resources :comments, only: [:index, :show]
@@ -22,7 +30,7 @@ Rails.application.routes.draw do
     resources :pictures
   end
   
-  resources :users, concerns: :imageable do
+  resources :users, concerns: :imageable, except: [:show, :update] do
   	resources :posts, :memes, :reactions, :comments
   end
   
