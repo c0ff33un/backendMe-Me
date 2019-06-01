@@ -7,4 +7,6 @@ class PostMeme < ApplicationRecord
   belongs_to :meme
   #1-n
   has_many :comments, as: :commentable, dependent: :destroy
+
+  
 end
