@@ -8,7 +8,7 @@ Rails.application.routes.draw do
                     sign_out: 'logout', 
                     registration: 'signup'}
 
-    resource :users, only: [:show, :update]
+    resources :users, only: [:index, :show, :update]
 
     concern :commentable do
     	resources :comments, only: [:index, :show]

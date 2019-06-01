@@ -14,6 +14,8 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 	bundle exec rake secret
 
+### If routes are changed make sure to check initializers/devise.rb
+
 ## Docs
 
 ### Auth using devise, jwt-devise and argon2:

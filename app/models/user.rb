@@ -18,12 +18,7 @@ class User < ApplicationRecord
 	#n-n
 	has_many :reactions, dependent: :destroy
 	#has_many :memes, through: :reactions
-
-	def generate_jwt
-		JWT.encode({id: id,
-								exp: 60.days.from_now.to_i},
-							Rails.application.credentials.secret_key_base)
-	end
+	
 	private 
 
 		def birthday_in_range
