@@ -49,7 +49,7 @@ GEM
     argon2 (2.0.2)
       ffi (~> 1.9)
       ffi-compiler (>= 0.1)
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -90,8 +90,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
     jwt (2.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -195,7 +193,6 @@ DEPENDENCIES
   devise-jwt (~> 0.4.1)
   dotenv-rails
   faker (~> 1.9, >= 1.9.3)
-  jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 3.11)

@@ -9,11 +9,9 @@ gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+# gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-#gem 'bcrypt', '~> 3.1.12b'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -34,7 +32,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -58,8 +56,6 @@ gem "will_paginate", "~> 3.1"
 
 gem "serializer", "~> 1.0"
 
-#gem "knock", "~> 2.1"
-
 gem "annotate", "~> 2.7"
 
 # Authentication
@@ -68,8 +64,6 @@ gem "devise", "~> 4.6"
 
 gem "devise-jwt", "~> 0.4.1"
 
-gem 'dotenv-rails', groups: [:development, :test]
-
-# encryption algorithm
+# Hashing algorithm
 
 gem "argon2", "~> 2.0"
