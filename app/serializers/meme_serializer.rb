@@ -1,6 +1,6 @@
 class MemeSerializer < ActiveModel::Serializer
 	attributes :id, :img, :creator, :reaction_counts
-
+	has_many :comments, serializer: CommentSerializer
 	def creator
 		{
 			id: self.object.user.id,

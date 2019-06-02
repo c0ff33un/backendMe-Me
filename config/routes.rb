@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     	resources :posts, :memes, :reactions, :comments
     end
 
-    resources :memes, concerns: :imageable do
+    resources :memes, concerns: [:imageable, :commentable] do
       resources :reactions, only: [:index, :show]
     	resources :post_memes
     end
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     	resources :post_memes
     end
 
-    resources :post_memes, concerns: :commentable
+    resources :post_memes
 
     resources :comments, only: [:show, :update, :destroy]
     resources :pictures, :templates

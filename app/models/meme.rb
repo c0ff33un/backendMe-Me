@@ -1,6 +1,6 @@
 class Meme < ApplicationRecord
   #validations
-  validates_associated :picture, :reactions, :post_memes
+  validates_associated :picture, :reactions, :post_memes, :comments
   validates_presence_of :picture
 
   #1-1
@@ -10,7 +10,9 @@ class Meme < ApplicationRecord
   has_many :post_memes, dependent: :destroy
   has_many :posts, through: :post_memes, dependent: :destroy
   
+  #1-n
   has_many :reactions, dependent: :destroy
+  has_many :comments, as: :commentable, dependent: :destroy
   #has_many :users, through: :reactions
 
   #Queries

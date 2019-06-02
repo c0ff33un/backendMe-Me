@@ -1,6 +1,6 @@
 class PostSerializer < ActiveModel::Serializer
   attributes :id, :creator, :body, :memes
-  
+  has_many :comments, serializer: CommentSerializer
   def creator
     {
       id: self.object.user.id,

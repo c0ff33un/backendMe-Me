@@ -6,7 +6,10 @@
         handle: Faker::Internet.unique.username(5..20),
         email: Faker::Internet.unique.email,
         password: Faker::Internet.password,
-        birthday: Faker::Date.birthday(min_age = 15, max_age = 125)
+        birthday: Faker::Date.birthday(min_age = 15, max_age = 125),
+        picture: Picture.create(
+            image: Faker::Avatar.image
+        )
     )
 end
 
@@ -44,7 +47,7 @@ end
     Reaction.create(
         user_id: rand(User.count) + 1,
         meme_id: rand(Meme.count) + 1,
-        reaction_type: rand(5) 
+        reaction_type: rand(4) 
     )
 end
 
@@ -67,8 +70,8 @@ end
         body: Faker::Lorem.paragraph
     )
 
-    postMeme = PostMeme.order('RANDOM()').first
-    postMeme.comments.create(
+    meme = Meme.order('RANDOM()').first
+    meme.comments.create(
         user_id: rand(User.count) + 1,
         body: Faker::Lorem.paragraph
     )
