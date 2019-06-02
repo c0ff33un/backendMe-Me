@@ -9,6 +9,11 @@ class User < ApplicationRecord
 	validate :birthday_in_range
 	validates_associated :memes, :posts, :comments, :reactions, :picture
 
+	#Scopes
+	scope :confirmed, -> {
+		where.not(:confirmed_at => nil)
+	} 
+	
 	#1-1
 	has_one :picture, as: :imageable, dependent: :destroy
 	#1-n
