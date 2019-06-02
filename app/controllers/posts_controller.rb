@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     def create
         user = User.find(params[:user_id])
         post = user.posts.create(post_params)
-        if post
+        if post.valid?
             render json: post, status: :created
         else
             render json: post.errors, status: :unprocessable_entity

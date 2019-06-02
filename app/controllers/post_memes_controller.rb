@@ -15,7 +15,7 @@ class PostMemesController < ApplicationController
 	def create
 		post = Post.find(params[:post_id])
 		post_meme = post.post_memes.create(post_meme_params)
-		if(post_meme)
+		if(post_meme.valid?)
 			render json: post_meme, status: :ok
 		else
 			render json: post_meme.errors, status: :unprocessable_entity

@@ -24,6 +24,24 @@ class User < ApplicationRecord
 	has_many :reactions, dependent: :destroy
 	#has_many :memes, through: :reactions
 	
+	#Queries
+	def best_memes
+		Meme.from_user(self.id).best
+	end
+
+	def best_posts
+		Post.from_user(self.id).best
+	end
+
+	def stats
+		stats = { 
+			:comments => self.comments.length,
+			:own_memes => self.memes.length,
+			:own_posts => self.posts.length,
+			:reactions => self.reactions.length
+		}
+	end
+
 	private 
 
 		def birthday_in_range

@@ -18,7 +18,7 @@ class ReactionsController < ApplicationController
 	def create
 		user = User.find(params[:user_id])
 		reaction = user.reactions.create(reaction_params)
-		if reaction
+		if reaction.valid?
 			render json: reaction, status: :created
 		else
 			render json: reaction.errors, status: :unprocessable_entity

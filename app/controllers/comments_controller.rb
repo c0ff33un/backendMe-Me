@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
 	def create
 		comment = @commentable.comments.create(comment_params)
-		if comment
+		if comment.valid?
 			render json: comment, status: :created
 		else
 			render json: comment.errors, status: :unprocessable_entity

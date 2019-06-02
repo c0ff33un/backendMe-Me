@@ -17,7 +17,7 @@ class PicturesController < ApplicationController
 
 	def create
 		image = @imageable.picture.create(image_params)
-		if image
+		if image.valid?
 			render json: image, status: :created
 		else
 			render json: image.errors, status: :unprocessable_entity
