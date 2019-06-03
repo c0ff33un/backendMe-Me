@@ -10,6 +10,25 @@ Rails.application.routes.draw do
 
     resources :users, only: [:index, :show, :update]
 
+
+    namespace :feed do
+      get 'best'
+      get 'hot' 
+      get 'newest'
+    end
+
+    namespace :momazos do
+      get 'best'
+      get 'hot'
+      get 'newest'
+    end
+
+    namespace :user_stats do
+      get 'stats'
+      get 'best_memes'
+      get 'best_posts'
+    end
+
     concern :commentable do
     	resources :comments, only: [:index, :show]
     end
