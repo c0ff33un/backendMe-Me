@@ -1,15 +1,15 @@
 class UserStatsController < ApplicationController
-
+    before_action :authenticate_user!
     def stats
-        render json: User.find(4).stats , status: :ok   
+        render json: current_user.stats , status: :ok   
     end
 
     def best_memes
-        render json: User.find(4).best_memes , status: :ok   
+        render json: current_user.best_memes , status: :ok   
     end
 
     def best_posts
-        render json: User.find(4).best_posts , status: :ok   
+        render json: current_user.best_posts , status: :ok   
     end
 
 end

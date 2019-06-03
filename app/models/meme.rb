@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: memes
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  swipe_up    :integer          default(0)
+#  swipe_down  :integer          default(0)
+#  swipe_left  :integer          default(0)
+#  swipe_right :integer          default(0)
+#
+
 class Meme < ApplicationRecord
   #validations
   validates_associated :picture, :reactions, :post_memes, :comments

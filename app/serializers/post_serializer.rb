@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer
+#  body       :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class PostSerializer < ActiveModel::Serializer
   attributes :id, :creator, :body, :memes
   has_many :comments, serializer: CommentSerializer
