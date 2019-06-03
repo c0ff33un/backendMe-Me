@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: jwt_blacklists
+#
+#  id         :integer          not null, primary key
+#  jti        :string
+#  exp        :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jti: MyString
+  exp: 2019-05-28 23:51:13
+
+two:
+  jti: MyString
+  exp: 2019-05-28 23:51:13

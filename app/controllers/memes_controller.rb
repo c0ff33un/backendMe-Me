@@ -27,7 +27,7 @@ class MemesController < ApplicationController
                 image: meme_params[:picture_image]
             )
         )
-        if meme
+        if meme.valid?
             render json: meme, status: :created
         else
             render json: meme.errors, status: :unprocessable_entity

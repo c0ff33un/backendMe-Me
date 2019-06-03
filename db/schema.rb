@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_17_173833) do
+ActiveRecord::Schema.define(version: 2019_06_02_053911) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -23,10 +23,22 @@ ActiveRecord::Schema.define(version: 2019_05_17_173833) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "jwt_blacklists", force: :cascade do |t|
+    t.string "jti"
+    t.datetime "exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jti"], name: "index_jwt_blacklists_on_jti"
+  end
+
   create_table "memes", force: :cascade do |t|
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "swipe_up", default: 0
+    t.integer "swipe_down", default: 0
+    t.integer "swipe_left", default: 0
+    t.integer "swipe_right", default: 0
     t.index ["user_id"], name: "index_memes_on_user_id"
   end
 
@@ -75,11 +87,20 @@ ActiveRecord::Schema.define(version: 2019_05_17_173833) do
 
   create_table "users", force: :cascade do |t|
     t.string "handle"
-    t.integer "age"
-    t.string "pass"
-    t.string "password_salt"
+    t.date "birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

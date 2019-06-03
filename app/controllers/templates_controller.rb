@@ -11,7 +11,7 @@ class TemplatesController < ApplicationController
 
     def create
         template = Template.create(Template_params)
-        if template
+        if template.valid?
             render json: template, status: :created
         else
             render json: template.errors, status: :unprocessable_entity

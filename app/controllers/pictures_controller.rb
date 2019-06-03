@@ -2,7 +2,6 @@ class PicturesController < ApplicationController
     before_action :load_imageable
 
     def index
-        puts @imageable.class
 		if @imageable
             images = @imageable.picture
 		else
@@ -18,7 +17,7 @@ class PicturesController < ApplicationController
 
 	def create
 		image = @imageable.picture.create(image_params)
-		if image
+		if image.valid?
 			render json: image, status: :created
 		else
 			render json: image.errors, status: :unprocessable_entity

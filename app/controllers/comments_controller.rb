@@ -3,11 +3,7 @@ class CommentsController < ApplicationController
 	before_action :load_commentable
 
 	def index
-		if @commentable
-			comments = @commentable.comments
-		else
-			comments = Comment.all
-		end
+		comments = @commentable.comments
 		render json: comments, status: :ok
 	end 
 
@@ -18,7 +14,7 @@ class CommentsController < ApplicationController
 
 	def create
 		comment = @commentable.comments.create(comment_params)
-		if comment
+		if comment.valid?
 			render json: comment, status: :created
 		else
 			render json: comment.errors, status: :unprocessable_entity
@@ -27,7 +23,6 @@ class CommentsController < ApplicationController
 
 	
 	def update
-		
 		if @commentable
 			comment = @commentable.comments.find(params[:id])
 		else 
@@ -42,7 +37,6 @@ class CommentsController < ApplicationController
 	end
 	
 	def destroy
-
 		if @commentable
 			comment = @commentable.coments.find(params[:id])
 		else
@@ -60,11 +54,7 @@ class CommentsController < ApplicationController
 	private 
 	def load_commentable
 		resource, id = request.path.split('/')[1,2]
-		if resource == "comments"
-			@commentable = nil
-		else
-			@commentable = resource.singularize.classify.constantize.find(id)
-		end
+		@commentable = resource.singularize.classify.constantize.find(id)
 	end
 
 	def comment_params
