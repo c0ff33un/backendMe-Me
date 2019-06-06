@@ -13,7 +13,8 @@
 #
 
 class MemeSerializer < ActiveModel::Serializer
-	attributes :id, :img, :creator, :reaction_counts
+	include Rails.application.routes.url_helpers
+	attributes :id, :creator, :reaction_counts, :img
 	has_many :comments, serializer: CommentSerializer
 	def creator
 		{
@@ -23,8 +24,8 @@ class MemeSerializer < ActiveModel::Serializer
 	end
 
 	def img
-		self.object.picture.image
-	end
+    rails_blob_path(object.image, only_path: true) if object.image.attached?
+  end
 	
 	def reaction_counts
 		{

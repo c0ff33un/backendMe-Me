@@ -40,7 +40,8 @@ class UsersController < ApplicationController
     private
 
         def user_params
-            params.require(:user).permit(:handle, :birthday, :email, :password)
+            params.require(:user).permit(:handle, :birthday, :email, :password, :avatar)
+            #note that avatar is not mandatory to create it!!
         end
         
 end

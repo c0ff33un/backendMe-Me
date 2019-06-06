@@ -11,8 +11,8 @@
 class Template < ApplicationRecord
     #validations
     validates :description, presence: true
-    validates_associated :picture
-    validates_presence_of :picture
+    validates_associated :image
+    validates_presence_of :image
     #1-1
-    has_one :picture, as: :imageable, dependent: :destroy
+    has_one_attached :image #active_storage
 end

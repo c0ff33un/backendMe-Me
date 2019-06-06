@@ -26,7 +26,7 @@ class User < ApplicationRecord
 	#validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
 	validate :birthday_in_range
-	validates_associated :memes, :posts, :comments, :reactions, :picture
+	validates_associated :memes, :posts, :comments, :reactions, :avatar
 
 	#Scopes
 	scope :confirmed, -> {
@@ -34,7 +34,8 @@ class User < ApplicationRecord
 	} 
 	
 	#1-1
-	has_one :picture, as: :imageable, dependent: :destroy
+	#active storage
+	has_one_attached :avatar #apparently dependence comes within it https://api.rubyonrails.org/classes/ActiveStorage/Attached/Macros.html
 	#1-n
 	has_many :comments, dependent: :destroy
 	has_many :memes, dependent: :destroy

@@ -69,7 +69,7 @@ class MemesController < ApplicationController
     private
     
         def meme_params
-            params.require(:meme).permit(:picture_image)
+            params.require(:meme).permit(:image)
         end
     
 end

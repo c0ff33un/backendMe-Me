@@ -33,15 +33,11 @@ Rails.application.routes.draw do
     	resources :comments, only: [:index, :show]
     end
 
-    concern :imageable do
-      resources :pictures
-    end
-
-    resources :users, concerns: :imageable, except: [:show, :update] do
+    resources :users, except: [:show, :update] do
     	resources :posts, :memes, :reactions, :comments
     end
 
-    resources :memes, concerns: [:imageable, :commentable] do
+    resources :memes, concerns: :commentable do
       resources :reactions, only: [:index, :show]
     	resources :post_memes
     end
@@ -53,6 +49,6 @@ Rails.application.routes.draw do
     resources :post_memes
 
     resources :comments, only: [:show, :update, :destroy]
-    resources :pictures, :templates
+    resources :templates
  
 end
