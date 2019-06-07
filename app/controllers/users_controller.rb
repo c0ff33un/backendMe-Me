@@ -20,8 +20,11 @@ class UsersController < ApplicationController
     end
 
     def update
-        if current_user.update_attributes(user_params)
-            render :show
+        user = User.find(params[:id])
+        user.avatar.purge if user.avatar.attached?
+
+        if user.update(user_params)
+            render json: user, status: :ok
         else
             render json: {errors: current_user.errors}, status: :unprocessable_entity
         end

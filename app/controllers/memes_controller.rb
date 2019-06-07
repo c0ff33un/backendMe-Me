@@ -22,11 +22,7 @@ class MemesController < ApplicationController
     
     def create
         user = User.find(params[:user_id])
-        meme = user.memes.create(
-            picture: Picture.create(
-                image: meme_params[:picture_image]
-            )
-        )
+        meme = user.memes.create(meme_params)
         if meme.valid?
             render json: meme, status: :created
         else
@@ -37,21 +33,11 @@ class MemesController < ApplicationController
     def update
         user = User.find(params[:user_id])
         meme = user.memes.find(params[:id])
-        meme.picture.destroy
-
-        if meme.picture.destroyed?
-            valid = meme.update(
-                picture: Picture.create(
-                    image: meme_params[:picture_image]
-                )
-            )
-            if valid
-                render json: meme, status: :ok
-            else
-                render json: meme.errors, status: :unprocessable_entity
-            end
+        meme.image.purge if meme.image.attached?
+        if meme.update(meme_params)
+            render json: meme, status: :ok
         else
-            render json: meme.picture.errors, status: :unprocessable_entity
+            render json: meme.errors, status: :unprocessable_entity
         end
     end
     

@@ -213,7 +213,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.9)
   annotate (~> 2.7)
   argon2 (~> 2.0)
-  aws-sdk-s3 (~> 1.42)
+  aws-sdk-s3
   bootsnap (>= 1.1.0)
   byebug
   devise (~> 4.6)

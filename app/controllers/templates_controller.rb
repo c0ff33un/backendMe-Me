@@ -10,7 +10,7 @@ class TemplatesController < ApplicationController
     end
 
     def create
-        template = Template.create(Template_params)
+        template = Template.create(template_params)
         if template.valid?
             render json: template, status: :created
         else
@@ -20,7 +20,8 @@ class TemplatesController < ApplicationController
 
     def update
         template = Template.find(params[:id])
-        if template.update(Template_params)
+        template.image.purge if template.image.attached?
+        if template.update(template_params)
             render json: template, status: :ok
         else
             render json: template.errors, status: :unprocessable_entity

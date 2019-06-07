@@ -71,4 +71,4 @@ gem "argon2", "~> 2.0"
 gem "active_model_serializers", "~> 0.10.9"
 
 #AWS sdk
-gem "aws-sdk-s3", "~> 1.42"
+gem "aws-sdk-s3", require: false
