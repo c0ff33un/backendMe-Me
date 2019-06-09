@@ -16,6 +16,8 @@ class Meme < ApplicationRecord
   #validations
   validates_associated :image, :reactions, :post_memes, :comments
   validates_presence_of :image
+  validates :image , attached: true, file_size: { less_than: 3.megabytes },
+										file_content_type: { allow: ['image/jpeg', 'image/png'] }
 
 	#Scopes
 	scope :from_user, -> (user) {

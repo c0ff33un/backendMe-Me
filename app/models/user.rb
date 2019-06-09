@@ -25,10 +25,12 @@ class User < ApplicationRecord
 	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 	#validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
-	validate :birthday_in_range
 	validates_associated :memes, :posts, :comments, :reactions, :avatar
+	validate :birthday_in_range
+	validates :avatar ,file_size: { less_than: 2.megabytes },
+											file_content_type: { allow: ['image/jpeg', 'image/png'] }, if: -> {avatar.attached?}
 
-	#Scopes
+	#Scopes'
 	scope :confirmed, -> {
 		where.not(:confirmed_at => nil)
 	} 
