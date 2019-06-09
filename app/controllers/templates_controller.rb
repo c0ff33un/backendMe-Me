@@ -20,7 +20,7 @@ class TemplatesController < ApplicationController
 
     def update
         template = Template.find(params[:id])
-        template.image.purge if template.image.attached?
+        template.image.purge_later if template.image.attached?
         if template.update(template_params)
             render json: template, status: :ok
         else

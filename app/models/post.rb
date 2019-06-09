@@ -20,7 +20,7 @@ class Post < ApplicationRecord
 	} 
 
   #1-1
-  belongs_to :user
+  belongs_to :user, counter_cache: true
   #1-n
   has_many :comments, as: :commentable, dependent: :destroy
   #n-n

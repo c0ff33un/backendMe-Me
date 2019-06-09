@@ -70,5 +70,6 @@ gem "argon2", "~> 2.0"
 
 gem "active_model_serializers", "~> 0.10.9"
 
-#AWS sdk
+#AWS sdk and imagemagick stuff
 gem "aws-sdk-s3", require: false
+

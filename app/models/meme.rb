@@ -23,8 +23,9 @@ class Meme < ApplicationRecord
 	} 
 
   #1-1
-  belongs_to :user
-  has_one_attached :image #active storage
+  belongs_to :user, counter_cache: true
+  #active storage
+  has_one_attached :image, dependent: :purge_later
   #n-n
   has_many :post_memes, dependent: :destroy
   has_many :posts, through: :post_memes, dependent: :destroy

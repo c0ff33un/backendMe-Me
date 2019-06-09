@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_171349) do
+ActiveRecord::Schema.define(version: 2019_06_08_055136) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -110,6 +110,13 @@ ActiveRecord::Schema.define(version: 2019_06_06_171349) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.integer "memes_count"
+    t.integer "posts_count"
+    t.integer "comments_count"
+    t.integer "swipe_up", default: 0
+    t.integer "swipe_down", default: 0
+    t.integer "swipe_left", default: 0
+    t.integer "swipe_right", default: 0
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

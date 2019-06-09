@@ -12,6 +12,6 @@ class TemplateSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
   attributes :id, :description, :created_at, :img
   def img
-    rails_blob_path(object.image, only_path: true) if object.image.attached?
+    rails_blob_url(object.image) if object.image.attached?
   end
 end

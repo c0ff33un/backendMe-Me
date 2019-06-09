@@ -35,7 +35,7 @@ class User < ApplicationRecord
 	
 	#1-1
 	#active storage
-	has_one_attached :avatar #apparently dependence comes within it https://api.rubyonrails.org/classes/ActiveStorage/Attached/Macros.html
+	has_one_attached :avatar, dependent: :purge_later
 	#1-n
 	has_many :comments, dependent: :destroy
 	has_many :memes, dependent: :destroy

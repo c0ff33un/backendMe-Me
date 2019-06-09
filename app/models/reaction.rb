@@ -27,15 +27,17 @@ class Reaction < ApplicationRecord
   belongs_to :meme
   
   private
+    #The idea is that each meme keeps counts of the reactions given
+    #and also that each user knows how many reactions of each type has made.
     @@type = ['swipe_up', 'swipe_down', 'swipe_left', 'swipe_right']
-
     def update_counter
       reaction = @@type[self.reaction_type]
       self.meme.update({reaction.to_sym => self.meme[reaction.to_sym]+1})
+      self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1})
     end
-
     def decrease_counter
       reaction = @@type[self.reaction_type_was]
       self.meme.update({reaction.to_sym => self.meme[reaction.to_sym]-1})
+      self.user.update({reaction.to_sym => self.user[reaction.to_sym]-1})
     end
   end

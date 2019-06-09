@@ -14,5 +14,6 @@ class Template < ApplicationRecord
     validates_associated :image
     validates_presence_of :image
     #1-1
-    has_one_attached :image #active_storage
+    #active_storage
+    has_one_attached :image, dependent: :purge_later
 end

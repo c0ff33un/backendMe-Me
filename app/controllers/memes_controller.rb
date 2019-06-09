@@ -33,7 +33,7 @@ class MemesController < ApplicationController
     def update
         user = User.find(params[:user_id])
         meme = user.memes.find(params[:id])
-        meme.image.purge if meme.image.attached?
+        meme.image.purge_later if meme.image.attached?
         if meme.update(meme_params)
             render json: meme, status: :ok
         else
