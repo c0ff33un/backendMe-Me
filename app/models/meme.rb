@@ -14,8 +14,10 @@
 
 class Meme < ApplicationRecord
   #validations
-  validates_associated :picture, :reactions, :post_memes, :comments
-  validates_presence_of :picture
+  validates_associated :image, :reactions, :post_memes, :comments
+  validates_presence_of :image
+  validates :image , attached: true, file_size: { less_than: 3.megabytes },
+										file_content_type: { allow: ['image/jpeg', 'image/png'] }
 
 	#Scopes
 	scope :from_user, -> (user) {
@@ -23,8 +25,9 @@ class Meme < ApplicationRecord
 	} 
 
   #1-1
-  belongs_to :user
-  has_one :picture, as: :imageable, dependent: :destroy
+  belongs_to :user, counter_cache: true
+  #active storage
+  has_one_attached :image, dependent: :purge_later
   #n-n
   has_many :post_memes, dependent: :destroy
   has_many :posts, through: :post_memes, dependent: :destroy

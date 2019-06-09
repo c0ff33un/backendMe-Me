@@ -18,14 +18,10 @@
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :handle, :birthday, :created_at
-  attribute :img, if: :img_not_nil?
-
-  def img_not_nil?
-    true if object.picture
-  end
+  include Rails.application.routes.url_helpers
+  attributes :id, :handle, :birthday, :created_at, :img
 
   def img
-    self.object.picture.image
+    rails_blob_url(object.avatar) if object.avatar.attached?
   end
 end
