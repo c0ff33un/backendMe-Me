@@ -6,7 +6,8 @@ Rails.application.routes.draw do
                 path_names: 
                   { sign_in: 'login', 
                     sign_out: 'logout', 
-                    registration: 'signup'}
+                    registration: 'signup'},
+                controllers: { omniauth_callbacks: 'omniauth_callbacks'}
 
     resources :users, only: [:index, :show, :update]
 
@@ -50,5 +51,7 @@ Rails.application.routes.draw do
 
     resources :comments, only: [:show, :update, :destroy]
     resources :templates
+
+    match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
  
 end

@@ -18,35 +18,40 @@
 #
 
 class User < ApplicationRecord
+
+  TEMP_EMAIL_PREFIX = 'change@me'
+  TEMP_EMAIL_REGEX = /\Achange@me/
+
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 	devise :database_authenticatable, :registerable, :confirmable,
-	       :recoverable, :rememberable, :validatable,
-	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
-	#validations
+	       :recoverable, :rememberable, :validatable, :trackable,
+	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist,
+	       :omniauthable, omniauth_providers: [:google_oauth2, :facebook]
+	# validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
 	validates_associated :memes, :posts, :comments, :reactions, :avatar
 	validate :birthday_in_range
 	validates :avatar ,file_size: { less_than: 2.megabytes },
 											file_content_type: { allow: ['image/jpeg', 'image/png'] }, if: -> {avatar.attached?}
 
-	#Scopes'
+	# Scopes'
 	scope :confirmed, -> {
 		where.not(:confirmed_at => nil)
 	} 
 	
-	#1-1
-	#active storage
+	# 1-1
+	# Active storage
 	has_one_attached :avatar, dependent: :purge_later
-	#1-n
+	# 1-n
 	has_many :comments, dependent: :destroy
 	has_many :memes, dependent: :destroy
 	has_many :posts, dependent: :destroy
-	#n-n
+	# n-n
 	has_many :reactions, dependent: :destroy
-	#has_many :memes, through: :reactions
-	
-	#Queries
+	# has_many :memes, through: :reactions
+	has_many :identities, dependent: :destroy
+	# Queries
 	def best_memes
 		Meme.from_user(self.id).best
 	end
@@ -63,6 +68,52 @@ class User < ApplicationRecord
 			:reactions => self.reactions.length
 		}
 	end
+
+	def self.find_for_oauth(auth, signed_in_resource = nil)
+
+    # Get the identity and user if they exist
+    identity = Identity.find_for_oauth(auth)
+
+    # If a signed_in_resource is provided it always overrides the existing user
+    # to prevent the identity being locked with accidentally created accounts.
+    # Note that this may leave zombie accounts (with no associated identity) which
+    # can be cleaned up at a later date.
+    user = signed_in_resource ? signed_in_resource : identity.user
+
+    # Create the user if needed
+    if user.nil?
+
+      # Get the existing user by email if the provider gives us a verified email.
+      # If no verified email was provided we assign a temporary email and ask the
+      # user to verify it on the next step via UsersController.finish_signup
+      email_is_verified = auth.info.email && (auth.info.verified || auth.info.verified_email)
+      email = auth.info.email if email_is_verified
+      user = User.where(:email => email).first if email
+
+      # Create the user if it's a new registration
+      if user.nil?
+        user = User.new(
+          name: auth.extra.raw_info.name,
+          #username: auth.info.nickname || auth.uid,
+          email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
+          password: Devise.friendly_token[0,20]
+        )
+        user.skip_confirmation!
+        user.save!
+      end
+    end
+
+    # Associate the identity with the user if needed
+    if identity.user != user
+      identity.user = user
+      identity.save!
+    end
+    user
+  end
+
+  def email_verified?
+    self.email && self.email !~ TEMP_EMAIL_REGEX
+  end
 
 	private 
 

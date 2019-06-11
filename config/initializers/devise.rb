@@ -306,7 +306,7 @@ Devise.setup do |config|
 
     jwt.dispatch_requests = [
         ['POST', %r{^/login$}],
-        ['GET',%r{^/$}]
+        ['POST', %r{^/auth/facebook}]
       ]
     jwt.revocation_requests = [
       ['DELETE', %r{^/logout$}]
@@ -318,4 +318,10 @@ Devise.setup do |config|
       user: [:json]
     }
   end
+
+  # Omniauth
+
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], tokens_params: { parse: :json }
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], tokens_params: { parse: :json }
+
 end

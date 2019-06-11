@@ -61,10 +61,13 @@ gem "annotate", "~> 2.7"
 # Authentication
 
 gem "devise", "~> 4.6"
-
 gem "devise-jwt", "~> 0.4.1"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
 
-# Hashing algorithm
+
+# Auth Hashing algorithm
 
 gem "argon2", "~> 2.0"
 
@@ -74,3 +77,5 @@ gem "active_model_serializers", "~> 0.10.9"
 gem "aws-sdk-s3", require: false
 gem "mini_magick"
 gem 'file_validators' # Cool gem
+
+

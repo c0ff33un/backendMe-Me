@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_055136) do
+ActiveRecord::Schema.define(version: 2019_06_11_010904) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(version: 2019_06_08_055136) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "identities", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "provider"
+    t.string "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_identities_on_user_id"
+  end
+
   create_table "jwt_blacklists", force: :cascade do |t|
     t.string "jti"
     t.datetime "exp"
@@ -61,6 +70,15 @@ ActiveRecord::Schema.define(version: 2019_06_08_055136) do
     t.integer "swipe_left", default: 0
     t.integer "swipe_right", default: 0
     t.index ["user_id"], name: "index_memes_on_user_id"
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.binary "image"
+    t.string "imageable_type"
+    t.integer "imageable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id"
   end
 
   create_table "post_memes", force: :cascade do |t|
@@ -97,29 +115,7 @@ ActiveRecord::Schema.define(version: 2019_06_08_055136) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "handle"
-    t.date "birthday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.integer "memes_count"
-    t.integer "posts_count"
-    t.integer "comments_count"
-    t.integer "swipe_up", default: 0
-    t.integer "swipe_down", default: 0
-    t.integer "swipe_left", default: 0
-    t.integer "swipe_right", default: 0
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'inet' for column 'current_sign_in_ip'
 
 end

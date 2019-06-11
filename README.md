@@ -36,6 +36,10 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 * [sendgrid on production](https://stackoverflow.com/questions/44417596/action-mailer-production-rb-not-working-when-deployed-via-sendgrid-and-heroku)
 
+### OmniAuth
+
+* [rails Omniauth using devise with Twitter, Facebook and linkedin](https://sourcey.com/articles/rails-omniauth-using-devise-with-twitter-facebook-and-linkedin)
+
 ## Database creation
 To-do
 ## Database initialization
