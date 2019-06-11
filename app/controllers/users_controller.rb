@@ -6,8 +6,16 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		user = User.find(params[:id])
-		render json: user, status: :ok
+		if params[:id]
+			user = User.find(params[:id])
+		else 
+			user = current_user
+		end
+		if user
+			render json: user, status: :ok
+		else
+			render json: { errors: "non valid user or not loged in" }, status: :not_found
+		end
 	end
 
 	def create
@@ -43,6 +51,6 @@ class UsersController < ApplicationController
 	private
     def user_params
 			params.require(:user).permit(:handle, :birthday, :email, :password, :avatar)
-			#note that avatar is not mandatory
+			#note that avatar is not mandatory, and it is intended to be setted after account creation
     end
 end

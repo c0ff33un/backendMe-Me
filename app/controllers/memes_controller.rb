@@ -4,6 +4,9 @@ class MemesController < ApplicationController
         if params[:user_id]
             user = User.find(params[:user_id])
             memes = user.memes.all
+        elsif user_signed_in?
+            user = User.find(params[:user_id])
+            memes = user.memes.
         else
             memes = Meme.all
         end
@@ -11,6 +14,7 @@ class MemesController < ApplicationController
     end
     
     def show
+        user = (params[:user_id])? User.find(params[:user_id])
         if params[:user_id]
             user = User.find(params[:user_id])
             meme = user.memes.find(params[:id])

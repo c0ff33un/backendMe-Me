@@ -1,54 +1,89 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    devise_for :users, 
-                defaults: { format: :json }, 
-                path: '',
-                path_names: 
-                  { sign_in: 'login', 
-                    sign_out: 'logout', 
-                    registration: 'signup'}
+  devise_for :users, 
+              defaults: { format: :json }, 
+              path: '',
+              path_names: 
+                { sign_in: 'login', 
+                  sign_out: 'logout', 
+                  registration: 'signup'}
+  
+  
+  #----- "public" routes -----
+  concern :commentable do
+  	resources :comments, only: :index
+  end
 
-    resources :users, only: [:index, :show, :update]
+  concern :user_accesible do
+    resources :memes, :posts, only: :index
+  end
 
-
-    namespace :feed do
-      get 'best'
-      get 'hot' 
-      get 'newest'
+  #only allows access users by id or if returns loged user
+  resources :users, only: :show, concerns: :user_accesible
+  resource :user, only: :show, concerns: :user_accesible do
+    member do
+      get 'activity', to: 'activity#index' #shows all activities
+      #shows activities per type
+      get 'activity/comments', to: 'comments#index'
+      get 'activity/up'
+      get 'activity/down'
+      get 'activity/right'
+      get 'activity/left'
     end
-
-    namespace :momazos do
+  end
+  
+  resources :memes, :posts, concerns: :commentable, only: [:index, :show] do
+    collection do
       get 'best'
       get 'hot'
       get 'newest'
     end
+  end
 
-    namespace :user_stats do
-      get 'stats'
-      get 'best_memes'
-      get 'best_posts'
-    end
+  
+  #resource :posts, only: [:index, :show]
+  #----- old routes -----
+  
+  # resources :users, only: [:index, :show, :update]
+  
+  # namespace :feed do
+  #   get 'best'
+  #   get 'hot' 
+  #   get 'newest'
+  # end
 
-    concern :commentable do
-    	resources :comments, only: [:index, :show]
-    end
+  # namespace :momazos do
+  #   get 'best'
+  #   get 'hot'
+  #   get 'newest'
+  # end
 
-    resources :users, except: [:show, :update] do
-    	resources :posts, :memes, :reactions, :comments
-    end
+  # namespace :user_stats do
+  #   get 'stats'
+  #   get 'best_memes'
+  #   get 'best_posts'
+  # end
 
-    resources :memes, concerns: :commentable do
-      resources :reactions, only: [:index, :show]
-    	resources :post_memes
-    end
+  # concern :commentable do
+  # 	resources :comments, only: [:index, :show]
+  # end
 
-    resources :posts, only: :show,concerns: :commentable do
-    	resources :post_memes
-    end
+  # resources :users, except: [:show, :update] do
+  # 	resources :posts, :memes, :reactions, :comments
+  # end
 
-    resources :post_memes
+  # resources :memes, concerns: :commentable do
+  #   resources :reactions, only: [:index, :show]
+  # 	resources :post_memes
+  # end
 
-    resources :comments, only: [:show, :update, :destroy]
-    resources :templates
+  # resources :posts, only: :show,concerns: :commentable do
+  # 	resources :post_memes
+  # end
+
+  # resources :post_memes
+
+  # resources :comments, only: [:show, :update, :destroy]
+  # resources :templates
  
 end
