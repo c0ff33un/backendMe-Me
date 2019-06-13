@@ -20,7 +20,8 @@ Rails.application.routes.draw do
 
   #only allows access users by id or if returns loged user
   resources :users, only: :show, concerns: :user_accesible
-  resource :user, only: :show, concerns: :user_accesible do
+  resource :user, only: :show do
+    resources :memes, :posts
     member do
       get 'activity', to: 'activity#index' #shows all activities
       #shows activities per type
@@ -31,14 +32,15 @@ Rails.application.routes.draw do
       get 'activity/left'
     end
   end
+  resolve('user'){[:user]}
   
-  resources :memes, :posts, concerns: :commentable, only: [:index, :show] do
-    collection do
-      get 'best'
-      get 'hot'
-      get 'newest'
-    end
-  end
+  # resources :memes, :posts, concerns: :commentable, only: [:index, :show] do
+  #   collection do
+  #     get 'best'
+  #     get 'hot'
+  #     get 'newest'
+  #   end
+  # end
 
   
   #resource :posts, only: [:index, :show]

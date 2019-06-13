@@ -1,19 +1,20 @@
 class CommentsController < ApplicationController
-
-	before_action :load_commentable
+	before_action :load_commentable , only: [:index, :show]
+	before_action :authenticate_user!, only: [:create, :update, :destroy]
 
 	def index
-		comments = @commentable.comments
+		comments = @commentable.comments.all
 		render json: comments, status: :ok
 	end 
 
 	def show
-		comment = Comment.find(params[:id])
+		comment = @commentable.comments.find(params[:id])
 		render json: comment, status: :ok
 	end
 
 	def create
-		comment = @commentable.comments.create(comment_params)
+		user = current_user
+		comment = current_user.comments.create(comment_params)
 		if comment.valid?
 			render json: comment, status: :created
 		else
@@ -45,14 +46,15 @@ class CommentsController < ApplicationController
 		
 		comment.destroy
 		if comment.destroyed?
-            render json: comment, status: :ok
-        else
-            render json: comment.errors, status: :unprocessable_entity
+			render json: comment, status: :ok
+		else
+			render json: comment.errors, status: :unprocessable_entity
 		end
 	end
 
 	private 
 	def load_commentable
+		if(user_signed_in?)
 		resource, id = request.path.split('/')[1,2]
 		@commentable = resource.singularize.classify.constantize.find(id)
 	end
