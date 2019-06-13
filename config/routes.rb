@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   
   #----- "public" routes -----
   concern :commentable do
-  	resources :comments, only: :index
+  	resources :comments
+  end
+  
+  concern :reactionable do
+    resources :reactions
   end
 
   concern :user_accesible do
@@ -21,18 +25,31 @@ Rails.application.routes.draw do
   #only allows access users by id or if returns loged user
   resources :users, only: :show, concerns: :user_accesible
   resource :user, only: :show do
-    resources :memes, :posts
+    resources :memes, :posts, except: :show
     member do
-      get 'activity', to: 'activity#index' #shows all activities
-      #shows activities per type
-      get 'activity/comments', to: 'comments#index'
-      get 'activity/up'
-      get 'activity/down'
-      get 'activity/right'
-      get 'activity/left'
+      get 'stats', to: 'user_stats#stats'
+      get 'best_memes', to: 'user_stats#best_memes'
+      get 'best_posts', to: 'user_stats#best_posts'
     end
   end
   resolve('user'){[:user]}
+
+  resources :posts, only: :show, concerns: :commentable do
+    resources :post_memes, except: [:index, :show]
+    collection do
+      get 'best', to: 'feed#best'
+      get 'hot', to: 'feed#hot'
+      get 'newest', to: 'feed#newest'
+    end
+  end
+
+  resources :memes, only: :show, concerns: [:commentable, :reactionable] do
+    collection do
+      get 'best', to: 'momazos#best'
+      get 'hot', to: 'momazos#hot'
+      get 'newest', to: 'momazos#newest'
+    end
+  end
   
   # resources :memes, :posts, concerns: :commentable, only: [:index, :show] do
   #   collection do

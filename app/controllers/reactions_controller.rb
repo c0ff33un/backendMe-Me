@@ -1,6 +1,7 @@
 class ReactionsController < ApplicationController
-	before_action :load_reaction , only: [:index, :show]
+	before_action :load_reactionable
 	before_action :authenticate_user!, only:[:create, :update, :destroy]
+
 	def index
 		reactions = @reactionable.reactions.all
 		render json: reactions, status: :ok
@@ -11,8 +12,6 @@ class ReactionsController < ApplicationController
 		render json: reaction, status: :ok
 	end
 
-	#should only be created through user
-	#meme should already exist
 	def create
 		user = current_user
 		reaction = user.reactions.create(reaction_params)
@@ -45,7 +44,7 @@ class ReactionsController < ApplicationController
 	end
 
 	private
-		def load_reaction
+		def load_reactionable
 			resource, id = request.path.split('/')[1,2]
 			@reactionable = resource.singularize.classify.constantize.find(id)
 		end

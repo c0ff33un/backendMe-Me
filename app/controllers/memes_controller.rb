@@ -1,5 +1,5 @@
 class MemesController < ApplicationController
-	before_action :authenticate_user!, only:[:create, :update, :destroy]
+	before_action :authenticate_user!, only:[:create, :update, :destroy, :comment]
 	def index
 		user = (params[:user_id])? User.find(params[:user_id]) : (user_signed_in?)? current_user : nil
 		if user
@@ -16,7 +16,7 @@ class MemesController < ApplicationController
 			meme = user.memes.find(params[:id])
 			render json: meme, status: :ok
 		else
-			render = { error: "invalid user or not loged in"}, status: :not_found
+			render json: { error: "invalid user or not loged in"}, status: :not_found
 		end
 	end
 
@@ -51,7 +51,7 @@ class MemesController < ApplicationController
 			render json: meme.errors, status: :unprocessable_entity
 		end
 	end
-
+	
 	private
 
 		def meme_params
