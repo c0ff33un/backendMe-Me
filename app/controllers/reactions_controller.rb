@@ -13,8 +13,9 @@ class ReactionsController < ApplicationController
 	end
 
 	def create
-		user = current_user
-		reaction = user.reactions.create(reaction_params)
+		reaction = @reactionable.reactions.new(reaction_params)
+		reaction.user_id = current_user.id
+		reaction.save
 		if reaction.valid?
 			render json: reaction, status: :created
 		else
@@ -23,8 +24,7 @@ class ReactionsController < ApplicationController
 	end
 
 	def update
-		user = current_user
-		reaction = user.reactions.find(params[:id])
+		reaction = current_user.reactions.find(params[:id])
 		if reaction.update(reaction_params)
 			render json: reaction, status: :ok
 		else
@@ -33,8 +33,7 @@ class ReactionsController < ApplicationController
 	end
 	
 	def destroy
-		user = current_user
-		reaction = user.reactions.find(params[:id])
+		reaction = current_user.reactions.find(params[:id])
 		reaction.destroy
 		if reaction.destroyed?
             render json: reaction, status: :ok
@@ -50,7 +49,7 @@ class ReactionsController < ApplicationController
 		end
 			
 		def reaction_params
-			params.require(:reaction).permit(:meme_id, :reaction_type)
+			params.require(:reaction).permit(:reaction_type)
 		end
 
 end

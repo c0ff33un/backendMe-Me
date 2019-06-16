@@ -7,15 +7,15 @@ class CommentsController < ApplicationController
 		render json: comments, status: :ok
 	end 
 
-	def show
+	def show #this is useless, do not works
 		comment = @commentable.comments.find(params[:id])
 		render json: comment, status: :ok
 	end
 
 	def create
-		pa = comment_params
-		pa[:comment].merge!(:user_id => current_user.id)
-		comment = @commentable.comments.create(pa)
+		comment = @commentable.comments.new(comment_params)
+		comment.user_id = current_user.id
+		comment.save
 		if comment.valid?
 			render json: comment, status: :created
 		else
@@ -25,11 +25,9 @@ class CommentsController < ApplicationController
 
 	
 	def update
-		pa = comment_params
-		pa[:comment].merge!(:user_id => current_user.id)
 		comment = @commentable.comments.find(params[:id])
 		if comment.user_id == current_user.id
-			if comment.update(pa)
+			if comment.update(comment_params)
 				render json: comment, status: :ok
 			else
 				render json: comment.errors, status: :unprocessable_entity

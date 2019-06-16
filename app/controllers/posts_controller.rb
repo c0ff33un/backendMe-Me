@@ -13,16 +13,15 @@ class PostsController < ApplicationController
 	def show
 		user = (params[:user_id])? User.find(params[:user_id]) : (user_signed_in?)? current_user : nil
 		if user
-				post = user.posts.find(params[:id])
-				render json: post, state: :ok
+			post = user.posts.find(params[:id])
+			render json: post, state: :ok
 		else
 			render json: { error: "invalid user or not loged in"}, status: :not_found
 		end
 	end
 	
 	def create
-		user = current_user
-		post = user.posts.create(post_params)
+		post = current_user.posts.create(post_params)
 		if post.valid?
 			render json: post, status: :created
 		else
@@ -31,8 +30,7 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		user = current_user
-		post = user.posts.find(params[:id])
+		post = current_user.posts.find(params[:id])
 		if post.update(post_params)
 			render json: post, status: :ok
 		else
@@ -53,6 +51,6 @@ class PostsController < ApplicationController
 
 	private
 		def post_params
-			params.require(:post).permit(:body)
+			params.require(:post).permit(:body, post_memes_attributes:[:id, :meme_id,:body])
 		end
 end

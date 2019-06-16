@@ -16,5 +16,5 @@ class PostMeme < ApplicationRecord
   belongs_to :meme
   #validations
   validates_uniqueness_of :meme_id, :scope => [:post_id] #composite key, avoid same meme on post
-  
+  validates_presence_of :post, :meme
 end

@@ -23,7 +23,9 @@ class PostSerializer < ActiveModel::Serializer
   def memes
     self.object.post_memes.map do |post_meme|
       {
+        post_meme_id: post_meme.id,
         meme_id: post_meme.meme_id,
+        body: post_meme.body,
         img: rails_blob_url(post_meme.meme.image)
       }
     end
