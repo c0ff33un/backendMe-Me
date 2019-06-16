@@ -25,9 +25,9 @@ class User < ApplicationRecord
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 	devise :database_authenticatable, :registerable, :confirmable,
-	       :recoverable, :rememberable, :validatable, :trackable,
-	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist,
-	       :omniauthable, omniauth_providers: [:google_oauth2, :facebook]
+	       :recoverable, :rememberable, :validatable, :trackable, :omniauthable,
+         :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
+         
 	# validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
 	validates_associated :memes, :posts, :comments, :reactions, :avatar
