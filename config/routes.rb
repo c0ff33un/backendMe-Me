@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   
   #----- "public" routes -----
   concern :commentable do
-  	resources :comments
+  	resources :comments, except: [:show]
   end
   
   concern :reactionable do
-    resources :reactions
+    resources :reactions, except: [:show]
   end
 
   concern :user_accesible do
@@ -25,7 +25,8 @@ Rails.application.routes.draw do
   #only allows access users by id or if returns loged user
   resources :users, only: :show, concerns: :user_accesible
   resource :user, only: :show do
-    resources :memes, :posts, except: :show
+    resources :memes, except: [:update] #cannot change meme image. Problematic for posts. Better destroy
+    resources :posts
     member do
       get 'stats', to: 'user_stats#stats'
       get 'best_memes', to: 'user_stats#best_memes'
