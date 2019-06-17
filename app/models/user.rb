@@ -16,8 +16,8 @@
 #  confirmed_at           :datetime
 #  confirmation_sent_at   :datetime
 #
-
 class User < ApplicationRecord
+	#include Devise::Test::ControllerHelpers
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 	devise :database_authenticatable, :registerable, :confirmable,
@@ -62,6 +62,23 @@ class User < ApplicationRecord
 			:own_posts => self.posts.length,
 			:reactions => self.reactions.length
 		}
+	end
+
+	def self.from_oauth(auth)
+		identity = Identity.from_oauth(auth)
+
+		user = self.new.tap do |u|
+			u.handle = auth[:email].split('@')[0]
+			u.email = auth[:email]
+			u.birthday = "1999-01-01"
+			u.password = "google123"
+			u.confirm
+		end
+		
+		user.save!
+		p user
+		#sign_in user
+
 	end
 
 	private 

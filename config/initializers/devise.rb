@@ -306,7 +306,7 @@ Devise.setup do |config|
 
     jwt.dispatch_requests = [
         ['POST', %r{^/login$}],
-        ['GET',%r{^/$}]
+        ['POST',%r{^/google/callback$}]
       ]
     jwt.revocation_requests = [
       ['DELETE', %r{^/logout$}]

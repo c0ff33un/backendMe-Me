@@ -9,6 +9,8 @@ Rails.application.routes.draw do
                   registration: 'signup'}
   
   
+  post 'google/callback', to: 'google#callback'
+
   #----- "public" routes -----
   concern :commentable do
   	resources :comments, except: [:show]
