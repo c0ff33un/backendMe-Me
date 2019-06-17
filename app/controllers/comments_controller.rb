@@ -1,19 +1,21 @@
 class CommentsController < ApplicationController
-
 	before_action :load_commentable
+	before_action :authenticate_user!, only: [:create, :update, :destroy]
 
 	def index
-		comments = @commentable.comments
+		comments = @commentable.comments.all
 		render json: comments, status: :ok
 	end 
 
-	def show
-		comment = Comment.find(params[:id])
+	def show #this is useless, do not works
+		comment = @commentable.comments.find(params[:id])
 		render json: comment, status: :ok
 	end
 
 	def create
-		comment = @commentable.comments.create(comment_params)
+		comment = @commentable.comments.new(comment_params)
+		comment.user_id = current_user.id
+		comment.save
 		if comment.valid?
 			render json: comment, status: :created
 		else
@@ -23,31 +25,30 @@ class CommentsController < ApplicationController
 
 	
 	def update
-		if @commentable
-			comment = @commentable.comments.find(params[:id])
-		else 
-			comment = Comment.find(params[:id])
+		comment = @commentable.comments.find(params[:id])
+		if comment.user_id == current_user.id
+			if comment.update(comment_params)
+				render json: comment, status: :ok
+			else
+				render json: comment.errors, status: :unprocessable_entity
+			end
+		else
+			render json: { error: "can't find commentable for the given user"}, status: :not_found
 		end
 		
-		if comment.update(comment_params)
-			render json: comment, status: :ok
-		else
-			render json: comment.errors, status: :unprocessable_entity
-		end
 	end
 	
 	def destroy
-		if @commentable
-			comment = @commentable.coments.find(params[:id])
+		comment = @commentable.comments.find(params[:id])
+		if comment.user_id == current_user.id
+			comment.destroy
+			if comment.destroyed?
+				render json: comment, status: :ok
+			else
+				render json: comment.errors, status: :unprocessable_entity
+			end
 		else
-			comment = Comment.find(params[:id])
-		end
-		
-		comment.destroy
-		if comment.destroyed?
-            render json: comment, status: :ok
-        else
-            render json: comment.errors, status: :unprocessable_entity
+			render json: { error: "can't find commentable for the given user"}, status: :not_found
 		end
 	end
 
@@ -58,7 +59,7 @@ class CommentsController < ApplicationController
 	end
 
 	def comment_params
-		params.require(:comment).permit(:user_id, :body)
+		params.require(:comment).permit(:body)
 	end
 
 end

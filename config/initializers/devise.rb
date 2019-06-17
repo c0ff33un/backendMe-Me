@@ -306,13 +306,13 @@ Devise.setup do |config|
 
     jwt.dispatch_requests = [
         ['POST', %r{^/login$}],
-        ['GET',%r{^/$}]
+        ['POST',%r{^/google/callback$}]
       ]
     jwt.revocation_requests = [
       ['DELETE', %r{^/logout$}]
     ]
 
-    jwt.expiration_time = 5.minutes.to_i
+    jwt.expiration_time = 1.day.to_i
 
     jwt.request_formats = {
       user: [:json]

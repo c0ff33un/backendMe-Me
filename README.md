@@ -91,12 +91,11 @@ git flow feature start <feature_name>
 	3. Finally add the Oatmeal.
 	4. Let it boil until it dries a bit.
 
-
-![Result](https://lh3.googleusercontent.com/VLnu9PzsmbkNrT9eNmfm2D4ZRyw5vAX-8cc00QMuU2nQmIKVlfQR3JagtoT4JeOZ5-9wz2UasyajuWdQNZGUExs1f_50aGZC31gQ2FpsNgRGV6ODSXwhzK73JYX-NO61aP7Nh_Krk8iYe5Irgq8h9QsgR3_UuKsXPhdW4SxtJmksoVeFpBg5yJI1_kXIyWaM24aPFE1kj5jrZp2Yg-32glAr4jBqdL1IqPrOFDUQeuZXkYzVDmMQ8raBOD7znNcT3wxoJXu-gQSavxGwNEJAB0_bhJfH5L_baOoxvEeD3wk5qSbyAdpw1_FfwoDSEiV51KStwa4a0uzbX5a0PxXmwXTiyxHyNRloIcjcsMBm7vIvK0DWajdIwcZ0Y4kCH4UFrPPiXS9_o0NMOb1qJy47p4nJF39urgPwI3M5U9SLgiN_K5I4iKiayp8QE9YlbGLZy0h6uSqHFxdbcnGbeC7_kjtE416GIifvgyEx1ASt7BxDNBr2RrXRIFIJjAd-jC2WoFcOxIaWkAq-xiXTJ6q6Eh_o5XF68PZpe7JEcqeUAuR5f5xaXSdBSPYplkvrr5hriVVnJvLMdIWqeUa438qedY26VjumFFWIw74hNd4_pplQ32lNwKle7gj5WSm8RzzCLBtYZExR5aNODRxas_Vzq9lQdAToHSU=w535-h952-no)
+![Result](https://i.imgur.com/jY48LPW.jpg)
 
 
 Enjoy!!!
 **Wait for more images in the next iteration**
-- Recept by: Miguel Angel Ortiz
+- Recipe by: Miguel Angel Ortiz
 - The one who ate it: Edwin Ricardo Mahecha
 ...

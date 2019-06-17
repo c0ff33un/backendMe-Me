@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PicturesControllerTest < ActionDispatch::IntegrationTest
+class IdentityTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

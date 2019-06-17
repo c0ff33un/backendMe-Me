@@ -11,10 +11,10 @@
 #
 
 class PostMeme < ApplicationRecord
-
   #1-1
   belongs_to :post
   belongs_to :meme
-
-  
+  #validations
+  validates_uniqueness_of :meme_id, :scope => [:post_id] #composite key, avoid same meme on post
+  validates_presence_of :post, :meme
 end

@@ -1,5 +1,6 @@
 .env
 tmp/
 log/
+storage/
 db/development.sqlite3
 db/test.sqlite3
