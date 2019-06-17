@@ -74,3 +74,7 @@ gem "active_model_serializers", "~> 0.10.9"
 gem "aws-sdk-s3", require: false
 gem "mini_magick"
 gem 'file_validators' # Cool gem
+
+#pdf generation
+gem 'prawn'
+gem 'prawn-table'
