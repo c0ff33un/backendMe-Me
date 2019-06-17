@@ -21,8 +21,8 @@ class User < ApplicationRecord
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 	devise :database_authenticatable, :registerable, :confirmable,
-	       :recoverable, :rememberable, :validatable,
-	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
+				:recoverable, :rememberable, :validatable, :omniauthable,
+				:jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 	#validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
 	validates_associated :memes, :posts, :comments, :reactions, :avatar
@@ -30,6 +30,18 @@ class User < ApplicationRecord
 	validates :avatar ,file_size: { less_than: 2.megabytes },
 											file_content_type: { allow: ['image/jpeg', 'image/png'] }, if: -> {avatar.attached?}
 
+
+	#Oauth
+	def self.from_omniauth(auth)
+		where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+			user.handle = auth.info.email.split('@')[0]
+			user.birthday = auth.info.birthday
+      #user.avatar = auth.info.image
+			user.password = Devise.friendly_token[0,20]
+			user.skip_confirmation!
+    end
+	end
 	#Scopes'
 	scope :confirmed, -> {
 		where.not(:confirmed_at => nil)
