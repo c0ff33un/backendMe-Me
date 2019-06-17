@@ -6,7 +6,8 @@ Rails.application.routes.draw do
               path_names: 
                 { sign_in: 'login', 
                   sign_out: 'logout', 
-                  registration: 'signup'}
+                  registration: 'signup'},
+              controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
   
   
   #----- "public" routes -----
