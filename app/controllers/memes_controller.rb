@@ -21,8 +21,7 @@ class MemesController < ApplicationController
 	end
 
 	def create
-		user = current_user
-		meme = user.memes.create(meme_params)
+		meme = current_user.memes.create(meme_params)
 		if meme.valid?
 			render json: meme, status: :created
 		else
@@ -31,8 +30,9 @@ class MemesController < ApplicationController
 	end
 
 	def update
-		user = current_user
-		meme = user.memes.find(params[:id])
+		# Not necessary to verify user.
+		# If that meme is not related with the logged user it will throw an error.
+		meme = current_user.memes.find(params[:id])
 		meme.image.purge_later if meme.image.attached?
 		if meme.update(meme_params)
 			render json: meme, status: :ok
@@ -41,9 +41,8 @@ class MemesController < ApplicationController
 		end
 	end
 
-	def destroy
-		user = current_user
-		meme = user.memes.find(params[:id])
+	def destroy 
+		meme = current_user.memes.find(params[:id])
 		meme.destroy
 		if meme.destroyed?
 			render json: meme, status: :ok

@@ -39,8 +39,7 @@ class PostsController < ApplicationController
 	end
 	
 	def destroy
-		user = current_user
-		post = user.posts.find(params[:id])
+		post = current_user.posts.find(params[:id])
 		post.destroy()
 		if post.destroyed?
 			render json: post, status: :ok
