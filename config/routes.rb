@@ -9,6 +9,9 @@ Rails.application.routes.draw do
                   registration: 'signup'}
   
   
+
+  #oauth
+  post 'auth/facebook'
   #----- "public" routes -----
   concern :commentable do
   	resources :comments, except: [:show]
