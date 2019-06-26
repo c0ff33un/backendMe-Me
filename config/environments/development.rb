@@ -56,6 +56,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   #Host for url redirection in active storage
-  Rails.application.routes.default_url_options[:host] = 'http://57e327be.ngrok.io'
-  #Rails.application.routes.default_url_options[:port] = 3000
+  Rails.application.routes.default_url_options[:host] = 'localhost'
+  Rails.application.routes.default_url_options[:port] = 3000
 end
