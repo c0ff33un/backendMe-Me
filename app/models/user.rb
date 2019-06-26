@@ -30,6 +30,25 @@ class User < ApplicationRecord
 	validates :avatar ,file_size: { less_than: 2.megabytes },
 											file_content_type: { allow: ['image/jpeg', 'image/png'] }, if: -> {avatar.attached?}
 
+
+	#Oauth
+
+	def self.find_for_oauth(auth)
+		user = User.where(uid: auth["id"], provider: 'facebook').first
+		unless user
+			user = User.new(
+				uid: auth["id"],
+				provider: auth["provider"],
+				email: auth["email"],
+				handle: 'temp'+String(rand(1000000)),
+				birthday: Date.strptime(auth["birthday"], '%m/%d/%Y').strftime('%Y-%m-%d'),
+				password: Devise.friendly_token[0,20]
+			)
+			user.skip_confirmation!
+			user.save
+		end
+		user
+	end
 	#Scopes'
 	scope :confirmed, -> {
 		where.not(:confirmed_at => nil)

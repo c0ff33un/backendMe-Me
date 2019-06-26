@@ -78,3 +78,6 @@ gem 'file_validators' # Cool gem
 #pdf generation
 gem 'prawn'
 gem 'prawn-table'
+
+#httparty
+gem 'httparty'
