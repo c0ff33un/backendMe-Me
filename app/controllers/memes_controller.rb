@@ -14,7 +14,7 @@ class MemesController < ApplicationController
 		user = (params[:user_id])? User.find(params[:user_id]) : (user_signed_in?)? current_user : nil
 		if user
 			meme = user.memes.find(params[:id])
-			render json: meme, status: :ok
+			render json: meme, status: :ok, rule: :show_comments
 		else
 			render json: { error: "invalid user or not loged in"}, status: :not_found
 		end
