@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-	before_action :load_commentable, :pagination_defaults
+	before_action :load_commentable,
+	before_action :pagination_defaults, only: :index
 	before_action :authenticate_user!, only: [:create, :update, :destroy]
 
 	def index
@@ -64,7 +65,7 @@ class CommentsController < ApplicationController
 
 	def pagination_defaults
 		params[:page] = 1 if params[:page] == nil 
-		params[:per_page] = 5 if params[:per_page] == nil
+		params[:per_page] = 12 if params[:per_page] == nil
 	end
 
 end

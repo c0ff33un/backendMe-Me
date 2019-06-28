@@ -78,3 +78,6 @@ gem 'file_validators' # Cool gem
 #pdf generation
 gem 'prawn'
 gem 'prawn-table'
+
+# progress bar gem, because we want to know how long does seeding lasts
+gem 'progressbar'

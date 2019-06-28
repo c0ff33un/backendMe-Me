@@ -1,5 +1,9 @@
 # Important commands to use: db:drop, db:create, db:seed
 require 'open-uri'
+
+#Progress bar
+
+progressbar = ProgressBar.create(total:70, :format => '%a |%b>>%i| %p%% %t')
 #Fill User
 5.times do |n|
 	user = User.new
@@ -9,6 +13,7 @@ require 'open-uri'
 	user.birthday = Faker::Date.birthday(min_age = 15, max_age = 125)
 	user.avatar.attach({io: open(Faker::Avatar.image), filename: "#{n}_faker_image.jpg"})
 	user.save
+	progressbar.increment
 end
 
 
@@ -18,6 +23,7 @@ end
 	meme.user_id = rand(User.count) + 1
 	meme.image.attach({io: open(Faker::Avatar.image), filename: "#{n}_faker_image.jpg"})
 	meme.save
+	progressbar.increment
 end
 
 #Fill Template
@@ -26,6 +32,7 @@ end
 	template.description = Faker::Lorem.paragraph,
 	template.image.attach({io: open(Faker::Avatar.image), filename: "#{n}_faker_image.jpg"})
 	template.save
+	progressbar.increment
 end
 
 #Fill Post
@@ -39,6 +46,7 @@ end
 		body: Faker::Lorem.sentence,
 		post_memes_attributes: memes
 	)
+	progressbar.increment
 end
 
 #Fill Reaction
@@ -48,6 +56,7 @@ end
 		meme_id: rand(Meme.count) + 1,
 		reaction_type: rand(4) 
 	)
+	progressbar.increment
 end
 
 
@@ -64,4 +73,5 @@ end
 		user_id: rand(User.count) + 1,
 		body: Faker::Lorem.paragraph
 	)
+	progressbar.increment
 end

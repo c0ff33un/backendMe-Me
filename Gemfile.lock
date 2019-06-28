@@ -151,6 +151,7 @@ GEM
       ttfunk (~> 1.5)
     prawn-table (0.2.2)
       prawn (>= 1.3.0, < 3.0.0)
+    progressbar (1.10.1)
     puma (3.12.1)
     rack (2.0.7)
     rack-cors (1.0.3)
@@ -240,6 +241,7 @@ DEPENDENCIES
   pg
   prawn
   prawn-table
+  progressbar
   puma (~> 3.11)
   rack-cors (~> 1.0)
   rails (~> 5.2.3)
