@@ -11,13 +11,8 @@ class PostsController < ApplicationController
 	end
 	
 	def show
-		user = (params[:user_id])? User.find(params[:user_id]) : (user_signed_in?)? current_user : nil
-		if user
-			post = user.posts.find(params[:id])
-			render json: post, state: :ok
-		else
-			render json: { error: "invalid user or not loged in"}, status: :not_found
-		end
+		post = Post.find(params[:id])
+		render json: post, rule: :memes, state: :ok
 	end
 	
 	def create

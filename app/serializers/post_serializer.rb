@@ -11,8 +11,17 @@
 
 class PostSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  attributes :id, :creator, :body, :memes
-  has_many :comments, serializer: CommentSerializer
+  attributes :id, :creator, :body, :memes, :thumbnail
+
+  def attributes(*args)
+    hash = super
+    hash.select{|k,v| rule.include?(k)}
+  end
+
+  def rule
+    rule = (instance_options[:rule])? instance_options[:rule].upcase.to_s : 'THUMBNAIL'
+    "PostSerializer::#{rule}".constantize
+  end
   def creator
     {
       id: self.object.user.id,
@@ -30,4 +39,20 @@ class PostSerializer < ActiveModel::Serializer
       }
     end
   end
+
+  def thumbnail
+    rails_representation_url(
+      self.object.post_memes.first.meme.image.variant(
+        combine_options: {
+          resize: "400x300>",
+          extent: "400x300",
+          background: "grey",
+          gravity: "North"
+        }
+      )
+    )
+  end
+  
+  THUMBNAIL = [:id, :creator, :body, :thumbnail]
+  MEMES = [:id, :creator, :body, :memes]
 end

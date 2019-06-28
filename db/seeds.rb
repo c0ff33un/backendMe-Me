@@ -30,15 +30,14 @@ end
 
 #Fill Post
 15.times do
+	memes = []
+	rand(1..10).times do
+		memes<<{meme_id: rand(Meme.count)+1, body: Faker::Lorem.paragraph}
+	end
 	Post.create(
 		user_id: rand(User.count) + 1,
 		body: Faker::Lorem.sentence,
-		post_memes_attributes: [
-			{
-				meme_id: rand(Meme.count)+1,
-				body: Faker::Lorem.paragraph
-			}
-		]
+		post_memes_attributes: memes
 	)
 end
 

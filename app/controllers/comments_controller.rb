@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
-	before_action :load_commentable
+	before_action :load_commentable, :pagination_defaults
 	before_action :authenticate_user!, only: [:create, :update, :destroy]
 
 	def index
 		comments = @commentable.comments.all
-		render json: comments, status: :ok
+		render json: comments.paginate(page: params[:page]).per_page(params[:per_page]), status: :ok
 	end 
 
 	def show #this is useless, do not works
@@ -60,6 +60,11 @@ class CommentsController < ApplicationController
 
 	def comment_params
 		params.require(:comment).permit(:body)
+	end
+
+	def pagination_defaults
+		params[:page] = 1 if params[:page] == nil 
+		params[:per_page] = 5 if params[:per_page] == nil
 	end
 
 end

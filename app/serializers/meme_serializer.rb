@@ -15,7 +15,6 @@
 class MemeSerializer < ActiveModel::Serializer
 	include Rails.application.routes.url_helpers
 	attributes :id, :creator, :reaction_counts, :img
-	has_many :comments, serializer: CommentSerializer#, if:->{instance_options[:rule]=='show_comments'}
 
 	def creator
 		{
