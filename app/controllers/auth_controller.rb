@@ -1,4 +1,4 @@
-class AuthController < Devise::ApplicationController
+class AuthController < ApplicationController
 	def facebook
 		facebook_data = HTTParty.get("https://graph.facebook.com/me",
 			query:{

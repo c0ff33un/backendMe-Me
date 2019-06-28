@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-	before_action :load_commentable,
+	before_action :load_commentable
 	before_action :pagination_defaults, only: :index
 	before_action :authenticate_user!, only: [:create, :update, :destroy]
 

@@ -26,7 +26,7 @@ class MemeSerializer < ActiveModel::Serializer
 		{
 			id: object.user.id,
 			handle: object.user.handle,
-			avatar: rails_blob_url(object.user.avatar)
+			avatar: (object.user.avatar.attached?)? rails_blob_url(object.user.avatar):nil
 		}
 	end
 

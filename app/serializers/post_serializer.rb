@@ -33,7 +33,7 @@ class PostSerializer < ActiveModel::Serializer
         post_meme_id: meme.post_meme_id,
         meme_id: meme.id,
         body: meme.body,
-        img: rails_blob_url(meme.image)
+        img: (meme.image.attached?)? rails_blob_url(meme.image) : nil
       }
     end
   end
