@@ -79,5 +79,8 @@ gem 'file_validators' # Cool gem
 gem 'prawn'
 gem 'prawn-table'
 
+# progress bar gem, because we want to know how long does seeding lasts
+gem 'progressbar'
+
 #httparty
 gem 'httparty'
