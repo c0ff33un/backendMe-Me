@@ -20,7 +20,31 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @user = users(:valid)
+  end
+
+  test "valid user" do
+    @user.avatar.attach({io: open(Faker::Avatar.image), filename: "faker_image.jpg"})
+    assert @user.valid?
+  end
+
+  test "valid user no avatar" do
+    assert @user.valid?
+  end
+
+  test "invaild user no handle" do
+    @user.handle = nil
+    assert_not @user.valid?
+  end
+
+  test "invaild user no email" do
+    @user.email = nil
+    assert_not @user.valid?
+  end
+
+  test "invaild user no birthday" do
+    @user.birthday = nil
+    assert_not @user.valid?
+  end
 end
