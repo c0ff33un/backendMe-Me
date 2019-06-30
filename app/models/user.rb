@@ -34,14 +34,14 @@ class User < ApplicationRecord
 	#Oauth
 
 	def self.find_for_oauth(auth)
-		user = User.where(uid: auth["id"], provider: 'facebook').first
+		user = User.where(uid: auth["id"], provider: auth["provider"]).first
 		unless user
 			user = User.new(
 				uid: auth["id"],
 				provider: auth["provider"],
 				email: auth["email"],
 				handle: 'temp'+String(rand(1000000)),
-				birthday: Date.strptime(auth["birthday"], '%m/%d/%Y').strftime('%Y-%m-%d'),
+				birthday: auth["birthday"],
 				password: Devise.friendly_token[0,20]
 			)
 			user.skip_confirmation!
