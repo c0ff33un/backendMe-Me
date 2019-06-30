@@ -11,10 +11,10 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  body: MyText
+# one:
+#   user: test_user
+#   body: here comes the sun
 
-two:
-  user: two
-  body: MyText
+# two:
+#   user: test_user
+#   body: and I said it's all right

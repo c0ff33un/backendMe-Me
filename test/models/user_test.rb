@@ -21,11 +21,13 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = users(:valid)
+    @user = users(:test_user)
+    @fixture_path = File.join(Rails.root, 'test','fixtures','files','image_50kb.jpg')
   end
 
   test "valid user" do
-    @user.avatar.attach({io: open(Faker::Avatar.image), filename: "faker_image.jpg"})
+    fixture_file = File.open(@fixture_path)
+    @user.avatar.attach({io: fixture_file, filename: "profile.jpg"})
     assert @user.valid?
   end
 
@@ -47,4 +49,10 @@ class UserTest < ActiveSupport::TestCase
     @user.birthday = nil
     assert_not @user.valid?
   end
+
+  test "invalid user young" do
+    @user.birthday='2010-02-02'
+
+  end
+
 end

@@ -20,6 +20,7 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 > If routes are changed make sure to check initializers/devise.rb
 
+*Note: Remember to add the respective keys when using aws or another storage service*
 #### 
 
 ## Docs
@@ -44,7 +45,24 @@ To-do
 	rails db:seed
 
 ## How to run the test suite
-To-do
+Useful information:
+* [getting started with minitest](https://blog.codeship.com/getting-started-with-minitest/)
+*	[mocking in ruby with minitest](https://semaphoreci.com/community/tutorials/mocking-in-ruby-with-minitest)
+*	[how to test rails models with minitest](https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-minitest)
+* [active storage stubbing with mocha](https://stackoverflow.com/questions/51603388/how-to-stub-file-size-on-active-storage-test-testunit)
+
+Gem for stubbing and mocking with minitest
+*	[mocha gem](https://github.com/freerange/mocha)
+
+## Oauth
+Guide used loosely based on devise-oauth politics:
+* [Stackoverflow](https://stackoverflow.com/questions/14812179/using-omniauth-for-facebook-login-with-only-access-token)
+
+*Note that this is the flow we must follow in our case because we are developing a mobile app. For web applications it is better to use one of the devise-omniauth avialable politics.*
+
+
+*Also remeber to add the dispatch in the devise.rb file in order to receive a jwt authorization token*
+
 ## Services (job queues, cache servers, search engines, etc.)
 To-do
 ## Deployment instructions
@@ -83,13 +101,13 @@ git flow feature start <feature_name>
 	7. Oatmeal(Obviously :v)
 	8. Someone who prepares it (Miguel).
 2. Instructions
-	1. Pour 1/2 vase of water and 1/2 vase milk into the pan.
-	2. Boil it while adding the following ingredients.
+	9. Pour 1/2 vase of water and 1/2 vase milk into the pan.
+	10. Boil it while adding the following ingredients.
 		1. Add a little salt.
 		2. Add a little sugar
 		3. Add cinnamon to taste.
-	3. Finally add the Oatmeal.
-	4. Let it boil until it dries a bit.
+	11. Finally add the Oatmeal.
+	12. Let it boil until it dries a bit.
 
 ![Result](https://i.imgur.com/jY48LPW.jpg)
 

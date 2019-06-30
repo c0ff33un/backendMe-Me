@@ -19,7 +19,7 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-valid:
+test_user:
   handle: testing
   email: test@example.com
   birthday: 1998-02-02

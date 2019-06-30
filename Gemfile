@@ -47,6 +47,14 @@ group :test, :production do
 	gem 'pg'
 end
 
+group :test do
+  gem 'mocha'
+  
+  # minitest
+  gem 'minitest-reporters'
+  gem 'color_pound_spec_reporter'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -70,17 +78,17 @@ gem "argon2", "~> 2.0"
 
 gem "active_model_serializers", "~> 0.10.9"
 
-#AWS sdk and validations for Active Storage
+# AWS sdk and validations for Active Storage
 gem "aws-sdk-s3", require: false
 gem "mini_magick"
 gem 'file_validators' # Cool gem
 
-#pdf generation
+# pdf generation
 gem 'prawn'
 gem 'prawn-table'
 
 # progress bar gem, because we want to know how long does seeding lasts
 gem 'progressbar'
 
-#httparty
+# httparty
 gem 'httparty'

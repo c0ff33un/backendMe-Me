@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="PostTest" filepath="/home/edwmapa/Git/backendMe-Me/test/models/post_test.rb" skipped="0" failures="0" errors="0" tests="1" assertions="0" time="0.13225536200479837">
+    <testcase name="test_create_simple_post" lineno="20" classname="PostTest" assertions="0" time="0.13225536200479837">
+    </testcase>
+  </testsuite>
+</testsuites>
