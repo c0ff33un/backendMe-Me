@@ -5,6 +5,7 @@ class AuthController < ApplicationController
 				access_token: params[:oauth_token],
 				fields: 'email,birthday'}).parsed_response
 		facebook_data["provider"]="facebook"
+		facebook_data["birthday"] = Date.strptime(auth["birthday"], '%m/%d/%Y').strftime('%Y-%m-%d')
 		user = User.find_for_oauth(facebook_data)
 		if user.persisted?
 			sign_in(user, scope: :user)
@@ -17,11 +18,15 @@ class AuthController < ApplicationController
 
 
 	def google
-		google_data = HTTParty.get("https://www.googleapis.com/oauth2/v2/tokeinfo",
+		google_data = HTTParty.get("https://www.googleapis.com/oauth2/v2/userinfo",
 			query:{
-				id_token: params[:oauth_token]
+				access_token: params[:oauth_token]
 				}).parsed_response
+		
+		puts('######################')
 		google_data["provider"]="google"
+		google_data["birthday"]="1998-02-02" #fake birthday, needs fixing
+		p(google_data)
 		user = User.find_for_oauth(google_data)
 		if user.persisted?
 			sign_in(user, scope: :user)

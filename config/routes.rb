@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   #oauth
   post 'auth/facebook'
+  post 'auth/google'
   #----- "public" routes -----
   concern :commentable do
   	resources :comments, except: [:show]
