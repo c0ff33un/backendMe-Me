@@ -26,13 +26,29 @@ class User < ApplicationRecord
 	#validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
 	validates_associated :memes, :posts, :comments, :reactions, :avatar
-	validate :birthday_in_range
+	validate :birthday_in_range, if: :birthday
+	validates :birthday, presence: true, allow_blank: false
 	validates :avatar ,file_size: { less_than: 2.megabytes },
 											file_content_type: { allow: ['image/jpeg', 'image/png'] }, if: -> {avatar.attached?}
 
 
+	#Scopes'
+	scope :confirmed, -> {
+		where.not(:confirmed_at => nil)
+	} 
+	
+	#1-1
+	#active storage
+	has_one_attached :avatar, dependent: :purge_later
+	#1-n
+	has_many :comments, dependent: :destroy
+	has_many :memes, dependent: :destroy
+	has_many :posts, dependent: :destroy
+	#n-n
+	has_many :reactions, dependent: :destroy
+	#has_many :memes, through: :reactions
+	
 	#Oauth
-
 	def self.find_for_oauth(auth)
 		user = User.where(uid: auth["id"], provider: auth["provider"]).first
 		unless user
@@ -49,21 +65,6 @@ class User < ApplicationRecord
 		end
 		user
 	end
-	#Scopes'
-	scope :confirmed, -> {
-		where.not(:confirmed_at => nil)
-	} 
-	
-	#1-1
-	#active storage
-	has_one_attached :avatar, dependent: :purge_later
-	#1-n
-	has_many :comments, dependent: :destroy
-	has_many :memes, dependent: :destroy
-	has_many :posts, dependent: :destroy
-	#n-n
-	has_many :reactions, dependent: :destroy
-	#has_many :memes, through: :reactions
 	
 	#Queries
 	def best_memes

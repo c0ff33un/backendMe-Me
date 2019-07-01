@@ -20,6 +20,7 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 > If routes are changed make sure to check initializers/devise.rb
 
+*Note: Remember to add the respective keys when using aws or another storage service*
 #### 
 
 ## Docs
@@ -59,7 +60,24 @@ To-do
 	rails db:seed
 
 ## How to run the test suite
-To-do
+Useful information:
+* [getting started with minitest](https://blog.codeship.com/getting-started-with-minitest/)
+*	[mocking in ruby with minitest](https://semaphoreci.com/community/tutorials/mocking-in-ruby-with-minitest)
+*	[how to test rails models with minitest](https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-minitest)
+* [active storage stubbing with mocha](https://stackoverflow.com/questions/51603388/how-to-stub-file-size-on-active-storage-test-testunit)
+
+Gem for stubbing and mocking with minitest
+*	[mocha gem](https://github.com/freerange/mocha)
+
+## Oauth
+Guide used loosely based on devise-oauth politics:
+* [Stackoverflow](https://stackoverflow.com/questions/14812179/using-omniauth-for-facebook-login-with-only-access-token)
+
+*Note that this is the flow we must follow in our case because we are developing a mobile app. For web applications it is better to use one of the devise-omniauth avialable politics.*
+
+
+*Also remeber to add the dispatch in the devise.rb file in order to receive a jwt authorization token*
+
 ## Services (job queues, cache servers, search engines, etc.)
 To-do
 ## Deployment instructions

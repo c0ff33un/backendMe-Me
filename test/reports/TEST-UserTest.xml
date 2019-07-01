@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="UserTest" filepath="/home/edwmapa/Git/backendMe-Me/test/models/user_test.rb" skipped="0" failures="0" errors="0" tests="6" assertions="5" time="0.41498260899970774">
+    <testcase name="test_valid_user_no_avatar" lineno="34" classname="UserTest" assertions="1" time="0.22758654900098918">
+    </testcase>
+    <testcase name="test_invaild_user_no_birthday" lineno="48" classname="UserTest" assertions="1" time="0.10255788399808807">
+    </testcase>
+    <testcase name="test_invaild_user_no_email" lineno="43" classname="UserTest" assertions="1" time="0.008473779002088122">
+    </testcase>
+    <testcase name="test_invalid_user_young" lineno="53" classname="UserTest" assertions="0" time="0.0015863439984968863">
+    </testcase>
+    <testcase name="test_valid_user" lineno="28" classname="UserTest" assertions="1" time="0.06454715300060343">
+    </testcase>
+    <testcase name="test_invaild_user_no_handle" lineno="38" classname="UserTest" assertions="1" time="0.010230899999442045">
+    </testcase>
+  </testsuite>
+</testsuites>
