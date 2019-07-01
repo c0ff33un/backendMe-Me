@@ -1,12 +1,14 @@
 include Rails.application.routes.url_helpers
-require 'dotenv'
 require 'aws-sdk'
 
 desc 'Looks for recent memes with a certain number of reports and analyze them!'
 namespace :db do
   task :explicit_image => :environment do
-    Dotenv.load
-    client = Aws::Rekognition::Client.new  
+    client = Aws::Rekognition::Client.new(
+      region: ENV['AWS_REGION'],
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'].
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+    )  
     memes = Meme.with_attached_image.where("report >= 2")
     #memes = Meme.with_attached_image.find(136)
     memes.each{|meme|
