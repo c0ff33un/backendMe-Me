@@ -1,7 +1,7 @@
 # README - SPRINT_REVISION_3
 
 ## Features desarrollados
-1. Active Storate
+1. Active Storage
     * Edwin Mahecha. 
 2. Google authentication
     * Edwin Mahecha.
