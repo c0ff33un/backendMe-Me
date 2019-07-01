@@ -14,7 +14,7 @@ class Reaction < ApplicationRecord
   validates :reaction_type, numericality: {
     only_integer: true,
     greater_than_or_equal_to: 0,
-    less_than_or_equal_to: 3}, presence: true
+    less_than_or_equal_to: 4}, presence: true
 
   validates_uniqueness_of :user_id, :scope => [:meme_id] #composite key
   #Callbacks
@@ -29,15 +29,19 @@ class Reaction < ApplicationRecord
   private
     #The idea is that each meme keeps counts of the reactions given
     #and also that each user knows how many reactions of each type has made.
-    @@type = ['swipe_up', 'swipe_down', 'swipe_left', 'swipe_right']
+    @@type = ['swipe_up', 'swipe_down', 'swipe_left', 'swipe_right', 'report']
     def update_counter
       reaction = @@type[self.reaction_type]
       self.meme.update({reaction.to_sym => self.meme[reaction.to_sym]+1})
-      self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1})
+      if reaction !='report'
+        self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1})
+      end
     end
     def decrease_counter
       reaction = @@type[self.reaction_type_was]
       self.meme.update({reaction.to_sym => self.meme[reaction.to_sym]-1})
-      self.user.update({reaction.to_sym => self.user[reaction.to_sym]-1})
+      if reaction !='report'
+        self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1})
+      end
     end
   end
