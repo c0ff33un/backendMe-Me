@@ -36,6 +36,11 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 * [sendgrid on production](https://stackoverflow.com/questions/44417596/action-mailer-production-rb-not-working-when-deployed-via-sendgrid-and-heroku)
 
+### AWS rekognition API
+*We use this api to filter out images with sexual content*
+* [gem documentation](https://docs.aws.amazon.com/sdkforruby/api/Aws/Rekognition/Client.html#detect_moderation_labels-instance_method)
+* [AWS rekognition setup](https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html)
+
 ## Database creation
 To-do
 ## Database initialization

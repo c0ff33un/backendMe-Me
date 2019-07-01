@@ -23,10 +23,8 @@ class AuthController < ApplicationController
 				access_token: params[:oauth_token]
 				}).parsed_response
 		
-		puts('######################')
 		google_data["provider"]="google"
 		google_data["birthday"]="1998-02-02" #fake birthday, needs fixing
-		p(google_data)
 		user = User.find_for_oauth(google_data)
 		if user.persisted?
 			sign_in(user, scope: :user)

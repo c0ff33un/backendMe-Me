@@ -3,9 +3,9 @@ require 'open-uri'
 
 #Progress bar
 
-progressbar = ProgressBar.create(total:70, :format => '%a |%b>>%i| %p%% %t')
+progressbar = ProgressBar.create(total:100, :format => '%a |%b>>%i| %p%% %t')
 #Fill User
-5.times do |n|
+10.times do |n|
 	user = User.new
 	user.handle = Faker::Internet.unique.username(5..20)
 	user.email = Faker::Internet.unique.email
@@ -18,7 +18,7 @@ end
 
 
 #Fill Meme 
-5.times do |n|
+20.times do |n|
 	meme = Meme.new
 	meme.user_id = rand(User.count) + 1
 	meme.image.attach({io: open(Faker::Avatar.image), filename: "#{n}_faker_image.jpg"})
@@ -50,18 +50,18 @@ end
 end
 
 #Fill Reaction
-15.times do
+20.times do
 	Reaction.create(
 		user_id: rand(User.count) + 1,
 		meme_id: rand(Meme.count) + 1,
-		reaction_type: rand(4) 
+		reaction_type: rand(5) 
 	)
 	progressbar.increment
 end
 
 
 #Fill Comments
-15.times do
+20.times do
 	post = Post.order('RANDOM()').first
 	post.comments.create(
 		user_id: rand(User.count) + 1,

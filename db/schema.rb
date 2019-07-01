@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_26_003241) do
+ActiveRecord::Schema.define(version: 2019_06_30_201022) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_003241) do
     t.integer "swipe_down", default: 0
     t.integer "swipe_left", default: 0
     t.integer "swipe_right", default: 0
+    t.integer "report", default: 0
     t.index ["user_id"], name: "index_memes_on_user_id"
   end
 

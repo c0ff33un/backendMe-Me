@@ -70,7 +70,7 @@ gem "argon2", "~> 2.0"
 
 gem "active_model_serializers", "~> 0.10.9"
 
-#AWS sdk and validations for Active Storage
+#AWS SDK and validations for Active Storage
 gem "aws-sdk-s3", require: false
 gem "mini_magick"
 gem 'file_validators' # Cool gem
@@ -84,3 +84,6 @@ gem 'progressbar'
 
 #httparty
 gem 'httparty'
+
+# AWS SDK to use rekognition api
+gem 'aws-sdk'
