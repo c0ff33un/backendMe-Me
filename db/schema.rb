@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_06_30_201022) do
     t.integer "swipe_left", default: 0
     t.integer "swipe_right", default: 0
     t.integer "report", default: 0
+    t.boolean "hidden", default: false
     t.index ["user_id"], name: "index_memes_on_user_id"
   end
 

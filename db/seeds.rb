@@ -54,7 +54,7 @@ end
 	Reaction.create(
 		user_id: rand(User.count) + 1,
 		meme_id: rand(Meme.count) + 1,
-		reaction_type: rand(5) 
+		reaction_type: rand(5)
 	)
 	progressbar.increment
 end

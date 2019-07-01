@@ -40,6 +40,16 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 *We use this api to filter out images with sexual content*
 * [gem documentation](https://docs.aws.amazon.com/sdkforruby/api/Aws/Rekognition/Client.html#detect_moderation_labels-instance_method)
 * [AWS rekognition setup](https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html)
+* [AWS with S3 bucket](https://stackoverflow.com/questions/55158595/rails-active-storage-aws-rekognition-detect-labels-filtered-labels)
+
+### Cron tasks
+*	[gem documentation](https://github.com/javan/whenever)
+
+We are storing all the logs in this path, please change it schedule.rb file to avoid problems
+>	set :output, '~/Git/backendMe-Me/tmp/crons.log'
+
+Heroku does not have crons, instead it offers its own scheduler
+* [heroku scheduler](https://devcenter.heroku.com/articles/scheduler)
 
 ## Database creation
 To-do
@@ -88,13 +98,13 @@ git flow feature start <feature_name>
 	7. Oatmeal(Obviously :v)
 	8. Someone who prepares it (Miguel).
 2. Instructions
-	1. Pour 1/2 vase of water and 1/2 vase milk into the pan.
-	2. Boil it while adding the following ingredients.
+	9. Pour 1/2 vase of water and 1/2 vase milk into the pan.
+	10. Boil it while adding the following ingredients.
 		1. Add a little salt.
 		2. Add a little sugar
 		3. Add cinnamon to taste.
-	3. Finally add the Oatmeal.
-	4. Let it boil until it dries a bit.
+	11. Finally add the Oatmeal.
+	12. Let it boil until it dries a bit.
 
 ![Result](https://i.imgur.com/jY48LPW.jpg)
 
@@ -104,3 +114,9 @@ Enjoy!!!
 - Recipe by: Miguel Angel Ortiz
 - The one who ate it: Edwin Ricardo Mahecha
 ...
+
+# Tunes to hear and cry due a unsuccessful iteration
+* [komm süßer Tod](https://www.youtube.com/watch?v=oIscL-Bjsq4)
+* [Plastic love - Mariya Takeuchi](https://www.youtube.com/watch?v=9Gj47G2e1Jc)
+* [LMFAO - Sexy and I know It](https://www.youtube.com/watch?v=wyx6JDQCslE)
+* [Gotye - Somebody That I Used To Know](https://www.youtube.com/watch?v=8UVNT4wvIGY)

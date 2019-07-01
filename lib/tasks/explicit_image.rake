@@ -17,28 +17,31 @@ namespace :db do
         key = dir.split("?").first
         @params={
           image: {s3_object: {bucket: ENV['AWS_BUCKET'],name: @key}},min_confidence: 70}
-        puts("##########"+uri)
+        #puts("##########"+uri)
       else
         local_route = ActiveStorage::Blob.service.send(:path_for,meme.image.key)
         @params = {
           image: {bytes: File.read(local_route)},
           min_confidence: 70
         }
-        puts("##########"+local_route)
+        #puts("##########"+local_route)
       end
       response = client.detect_moderation_labels(@params)
       flag = false
-      response.moderation_labels.each{|label|
-        puts("#{label.name} - #{label.confidence}")
-        unless label.parent_name == "Suggestive"
-      }
+      response.moderation_labels.each do |label|
+        #Remove comment in order to get debug
+        #puts("#{label.name} - #{label.confidence}")
+        unless 
+          label.parent_name == "Suggestive"
+          break
+        end
+      end
 
       if flag
-        #To implement stuff....
-        #Delete meme?
+        meme.hidden = true
+        #To do....
         #Ban user for 24H and kill him on second offense
-        #
-        #meme.delete
+        ## Set up mailers to notify user his offense
       end
     }
   end

@@ -4,8 +4,11 @@ class AuthController < ApplicationController
 			query:{
 				access_token: params[:oauth_token],
 				fields: 'email,birthday'}).parsed_response
+
 		facebook_data["provider"]="facebook"
-		facebook_data["birthday"] = Date.strptime(auth["birthday"], '%m/%d/%Y').strftime('%Y-%m-%d')
+		facebook_data["birthday"] = Date.strptime(facebook_data["birthday"], '%m/%d/%Y').strftime('%Y-%m-%d')
+		puts('############')
+		p(facebook_data)
 		user = User.find_for_oauth(facebook_data)
 		if user.persisted?
 			sign_in(user, scope: :user)

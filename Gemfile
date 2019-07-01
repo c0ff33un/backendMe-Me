@@ -70,20 +70,23 @@ gem "argon2", "~> 2.0"
 
 gem "active_model_serializers", "~> 0.10.9"
 
-#AWS SDK and validations for Active Storage
+# AWS SDK and validations for Active Storage
 gem "aws-sdk-s3", require: false
 gem "mini_magick"
 gem 'file_validators' # Cool gem
 
-#pdf generation
+# pdf generation
 gem 'prawn'
 gem 'prawn-table'
 
 # progress bar gem, because we want to know how long does seeding lasts
 gem 'progressbar'
 
-#httparty
+# httparty
 gem 'httparty'
 
 # AWS SDK to use rekognition api
 gem 'aws-sdk'
+
+# Cron jobs
+gem 'whenever', require: false
