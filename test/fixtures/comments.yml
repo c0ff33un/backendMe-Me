@@ -15,10 +15,8 @@
 
 one:
   user: one
-  post_meme: one
   body: MyText
 
 two:
   user: two
-  post_meme: two
   body: MyText

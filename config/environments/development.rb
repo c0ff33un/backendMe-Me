@@ -55,4 +55,8 @@ Rails.application.configure do
   # devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  #Host for url redirection in active storage
+  Rails.application.routes.default_url_options[:host] = 'https://ee8c941a.ngrok.io'
+  #Rails.application.routes.default_url_options[:host] = 'localhost'
+  #Rails.application.routes.default_url_options[:port] = 3000
 end

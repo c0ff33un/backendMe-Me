@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="MemeTest" filepath="/home/edwmapa/Git/backendMe-Me/test/models/meme_test.rb" skipped="0" failures="0" errors="0" tests="4" assertions="4" time="0.056540107012551744">
+    <testcase name="test_create_meme_with_image" lineno="29" classname="MemeTest" assertions="1" time="0.020673614002589602">
+    </testcase>
+    <testcase name="test_create_meme_with_wrong_image_file_size" lineno="35" classname="MemeTest" assertions="1" time="0.019391993002500385">
+    </testcase>
+    <testcase name="test_create_meme_with_wrong_image_mimetype" lineno="42" classname="MemeTest" assertions="1" time="0.014201650003087707">
+    </testcase>
+    <testcase name="test_create_meme_no_image" lineno="25" classname="MemeTest" assertions="1" time="0.0022728500043740496">
+    </testcase>
+  </testsuite>
+</testsuites>

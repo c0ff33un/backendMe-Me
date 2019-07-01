@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_02_053911) do
+ActiveRecord::Schema.define(version: 2019_06_30_201022) do
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.integer "record_id", null: false
+    t.integer "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -39,16 +60,9 @@ ActiveRecord::Schema.define(version: 2019_06_02_053911) do
     t.integer "swipe_down", default: 0
     t.integer "swipe_left", default: 0
     t.integer "swipe_right", default: 0
+    t.integer "report", default: 0
+    t.boolean "hidden", default: false
     t.index ["user_id"], name: "index_memes_on_user_id"
-  end
-
-  create_table "pictures", force: :cascade do |t|
-    t.binary "image"
-    t.string "imageable_type"
-    t.integer "imageable_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id"
   end
 
   create_table "post_memes", force: :cascade do |t|
@@ -98,6 +112,15 @@ ActiveRecord::Schema.define(version: 2019_06_02_053911) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.integer "memes_count"
+    t.integer "posts_count"
+    t.integer "comments_count"
+    t.integer "swipe_up", default: 0
+    t.integer "swipe_down", default: 0
+    t.integer "swipe_left", default: 0
+    t.integer "swipe_right", default: 0
+    t.string "uid"
+    t.string "provider"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

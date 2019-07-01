@@ -25,16 +25,21 @@ class User < ApplicationRecord
 	       :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 	#validations
 	validates :handle, length: {in: 5..20}, presence: true, uniqueness: true, allow_blank: false
-	validate :birthday_in_range
-	validates_associated :memes, :posts, :comments, :reactions, :picture
+	validates_associated :memes, :posts, :comments, :reactions, :avatar
+	validate :birthday_in_range, if: :birthday
+	validates :birthday, presence: true, allow_blank: false
+	validates :avatar ,file_size: { less_than: 2.megabytes },
+											file_content_type: { allow: ['image/jpeg', 'image/png'] }, if: -> {avatar.attached?}
 
-	#Scopes
+
+	#Scopes'
 	scope :confirmed, -> {
 		where.not(:confirmed_at => nil)
 	} 
 	
 	#1-1
-	has_one :picture, as: :imageable, dependent: :destroy
+	#active storage
+	has_one_attached :avatar, dependent: :purge_later
 	#1-n
 	has_many :comments, dependent: :destroy
 	has_many :memes, dependent: :destroy
@@ -42,6 +47,24 @@ class User < ApplicationRecord
 	#n-n
 	has_many :reactions, dependent: :destroy
 	#has_many :memes, through: :reactions
+	
+	#Oauth
+	def self.find_for_oauth(auth)
+		user = User.where(uid: auth["id"], provider: auth["provider"]).first
+		unless user
+			user = User.new(
+				uid: auth["id"],
+				provider: auth["provider"],
+				email: auth["email"],
+				handle: 'temp'+String(rand(1000000)),
+				birthday: auth["birthday"],
+				password: Devise.friendly_token[0,20]
+			)
+			user.skip_confirmation!
+			user.save
+		end
+		user
+	end
 	
 	#Queries
 	def best_memes

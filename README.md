@@ -20,6 +20,7 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 > If routes are changed make sure to check initializers/devise.rb
 
+*Note: Remember to add the respective keys when using aws or another storage service*
 #### 
 
 ## Docs
@@ -36,6 +37,21 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 
 * [sendgrid on production](https://stackoverflow.com/questions/44417596/action-mailer-production-rb-not-working-when-deployed-via-sendgrid-and-heroku)
 
+### AWS rekognition API
+*We use this api to filter out images with sexual content*
+* [gem documentation](https://docs.aws.amazon.com/sdkforruby/api/Aws/Rekognition/Client.html#detect_moderation_labels-instance_method)
+* [AWS rekognition setup](https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html)
+* [AWS with S3 bucket](https://stackoverflow.com/questions/55158595/rails-active-storage-aws-rekognition-detect-labels-filtered-labels)
+
+### Cron tasks
+*	[gem documentation](https://github.com/javan/whenever)
+
+We are storing all the logs in this path, please change it schedule.rb file to avoid problems
+>	set :output, '~/Git/backendMe-Me/tmp/crons.log'
+
+Heroku does not have crons, instead it offers its own scheduler
+* [heroku scheduler](https://devcenter.heroku.com/articles/scheduler)
+
 ## Database creation
 To-do
 ## Database initialization
@@ -44,7 +60,24 @@ To-do
 	rails db:seed
 
 ## How to run the test suite
-To-do
+Useful information:
+* [getting started with minitest](https://blog.codeship.com/getting-started-with-minitest/)
+*	[mocking in ruby with minitest](https://semaphoreci.com/community/tutorials/mocking-in-ruby-with-minitest)
+*	[how to test rails models with minitest](https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-minitest)
+* [active storage stubbing with mocha](https://stackoverflow.com/questions/51603388/how-to-stub-file-size-on-active-storage-test-testunit)
+
+Gem for stubbing and mocking with minitest
+*	[mocha gem](https://github.com/freerange/mocha)
+
+## Oauth
+Guide used loosely based on devise-oauth politics:
+* [Stackoverflow](https://stackoverflow.com/questions/14812179/using-omniauth-for-facebook-login-with-only-access-token)
+
+*Note that this is the flow we must follow in our case because we are developing a mobile app. For web applications it is better to use one of the devise-omniauth avialable politics.*
+
+
+*Also remeber to add the dispatch in the devise.rb file in order to receive a jwt authorization token*
+
 ## Services (job queues, cache servers, search engines, etc.)
 To-do
 ## Deployment instructions
@@ -83,20 +116,25 @@ git flow feature start <feature_name>
 	7. Oatmeal(Obviously :v)
 	8. Someone who prepares it (Miguel).
 2. Instructions
-	1. Pour 1/2 vase of water and 1/2 vase milk into the pan.
-	2. Boil it while adding the following ingredients.
+	9. Pour 1/2 vase of water and 1/2 vase milk into the pan.
+	10. Boil it while adding the following ingredients.
 		1. Add a little salt.
 		2. Add a little sugar
 		3. Add cinnamon to taste.
-	3. Finally add the Oatmeal.
-	4. Let it boil until it dries a bit.
+	11. Finally add the Oatmeal.
+	12. Let it boil until it dries a bit.
 
-
-![Result](https://lh3.googleusercontent.com/VLnu9PzsmbkNrT9eNmfm2D4ZRyw5vAX-8cc00QMuU2nQmIKVlfQR3JagtoT4JeOZ5-9wz2UasyajuWdQNZGUExs1f_50aGZC31gQ2FpsNgRGV6ODSXwhzK73JYX-NO61aP7Nh_Krk8iYe5Irgq8h9QsgR3_UuKsXPhdW4SxtJmksoVeFpBg5yJI1_kXIyWaM24aPFE1kj5jrZp2Yg-32glAr4jBqdL1IqPrOFDUQeuZXkYzVDmMQ8raBOD7znNcT3wxoJXu-gQSavxGwNEJAB0_bhJfH5L_baOoxvEeD3wk5qSbyAdpw1_FfwoDSEiV51KStwa4a0uzbX5a0PxXmwXTiyxHyNRloIcjcsMBm7vIvK0DWajdIwcZ0Y4kCH4UFrPPiXS9_o0NMOb1qJy47p4nJF39urgPwI3M5U9SLgiN_K5I4iKiayp8QE9YlbGLZy0h6uSqHFxdbcnGbeC7_kjtE416GIifvgyEx1ASt7BxDNBr2RrXRIFIJjAd-jC2WoFcOxIaWkAq-xiXTJ6q6Eh_o5XF68PZpe7JEcqeUAuR5f5xaXSdBSPYplkvrr5hriVVnJvLMdIWqeUa438qedY26VjumFFWIw74hNd4_pplQ32lNwKle7gj5WSm8RzzCLBtYZExR5aNODRxas_Vzq9lQdAToHSU=w535-h952-no)
+![Result](https://i.imgur.com/jY48LPW.jpg)
 
 
 Enjoy!!!
 **Wait for more images in the next iteration**
-- Recept by: Miguel Angel Ortiz
+- Recipe by: Miguel Angel Ortiz
 - The one who ate it: Edwin Ricardo Mahecha
 ...
+
+# Tunes to hear and cry due a unsuccessful iteration
+* [komm süßer Tod](https://www.youtube.com/watch?v=oIscL-Bjsq4)
+* [Plastic love - Mariya Takeuchi](https://www.youtube.com/watch?v=9Gj47G2e1Jc)
+* [LMFAO - Sexy and I know It](https://www.youtube.com/watch?v=wyx6JDQCslE)
+* [Gotye - Somebody That I Used To Know](https://www.youtube.com/watch?v=8UVNT4wvIGY)

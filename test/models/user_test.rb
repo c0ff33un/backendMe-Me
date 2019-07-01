@@ -20,7 +20,39 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @user = users(:test_user)
+    @fixture_path = File.join(Rails.root, 'test','fixtures','files','image_50kb.jpg')
+  end
+
+  test "valid user" do
+    fixture_file = File.open(@fixture_path)
+    @user.avatar.attach({io: fixture_file, filename: "profile.jpg"})
+    assert @user.valid?
+  end
+
+  test "valid user no avatar" do
+    assert @user.valid?
+  end
+
+  test "invaild user no handle" do
+    @user.handle = nil
+    assert_not @user.valid?
+  end
+
+  test "invaild user no email" do
+    @user.email = nil
+    assert_not @user.valid?
+  end
+
+  test "invaild user no birthday" do
+    @user.birthday = nil
+    assert_not @user.valid?
+  end
+
+  test "invalid user young" do
+    @user.birthday='2010-02-02'
+
+  end
+
 end

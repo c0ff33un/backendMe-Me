@@ -10,23 +10,24 @@
 #
 
 class Post < ApplicationRecord
-  #validations
-  validates :body, length: {maximum: 125}
-  validates_associated :post_memes, :comments
-
   #Scopes
 	scope :from_user, -> (user) {
 		where(:user_id => user) if user.present?
 	} 
 
   #1-1
-  belongs_to :user
+  belongs_to :user, counter_cache: true
   #1-n
   has_many :comments, as: :commentable, dependent: :destroy
   #n-n
   has_many :post_memes, dependent: :destroy
   has_many :memes, through: :post_memes, dependent: :destroy
 
+  #validations
+  validates :body, length: {maximum: 125}
+  validates_associated :post_memes, :comments
+  accepts_nested_attributes_for :post_memes, reject_if:[:new_record?, :reject_post_memes] #https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+  validates :post_memes, :length=>{:minimum=>1, :maximum=>10}
   #Queries
   def self.filter( upload_date = Time.use_zone(Time.zone.name) { 1.week.ago }, page = 1 ) 
     self.where(created_at:(upload_date..Time.zone.now))
@@ -45,4 +46,8 @@ class Post < ApplicationRecord
     self.order( 'created_at DESC')
   end
 
+  private
+  def reject_post_memes(attributes)
+    attributes['body'].blank?
+  end
 end

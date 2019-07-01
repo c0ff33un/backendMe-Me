@@ -13,25 +13,44 @@
 #
 
 class MemeSerializer < ActiveModel::Serializer
-	attributes :id, :img, :creator, :reaction_counts
-	has_many :comments, serializer: CommentSerializer
+	include Rails.application.routes.url_helpers
+	attributes :id, :creator, :reaction_counts
+	attribute :img, if: -> {rule == 'FULL_SIZE'}
+  attribute :thumbnail, if: -> {rule == 'THUMBNAIL'}
+	
+	def rule
+    rule = (instance_options[:rule])? instance_options[:rule].upcase.to_s : 'THUMBNAIL'
+  end
+	
 	def creator
 		{
-			id: self.object.user.id,
-			handle: self.object.user.handle
+			id: object.user.id,
+			handle: object.user.handle,
+			avatar: (object.user.avatar.attached?)? rails_blob_url(object.user.avatar):nil
 		}
 	end
 
 	def img
-		self.object.picture.image
+    rails_blob_url(object.image) if object.image.attached?
 	end
 	
+	def thumbnail
+		rails_representation_url(
+      self.object.image.variant(
+        combine_options: {
+          resize: "240^>",
+          crop: "240x240+0+0"
+        }
+      ).processed
+    )
+	end
 	def reaction_counts
 		{
-			up: self.object.swipe_up,
-			down: self.object.swipe_down,
-			left: self.object.swipe_left,
-			right: self.object.swipe_right
+			up: object.swipe_up,
+			down: object.swipe_down,
+			left: object.swipe_left,
+			right: object.swipe_right
 		}
 	end
+
 end
