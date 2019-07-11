@@ -77,10 +77,15 @@ class User < ApplicationRecord
 
 	def stats
 		stats = { 
-			:comments => self.comments.length,
-			:own_memes => self.memes.length,
-			:own_posts => self.posts.length,
-			:reactions => self.reactions.length
+			comments_count: self.comments_count,
+			memes_count: self.memes_count,
+			posts_count: self.posts_count,
+			reaction_count: {
+				swipe_up: self.swipe_up,
+				swipe_down: self.swipe_down,
+				swipe_left: self.swipe_left,
+				swipe_right: self.swipe_right
+			}
 		}
 	end
 

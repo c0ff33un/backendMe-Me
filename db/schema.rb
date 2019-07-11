@@ -112,9 +112,9 @@ ActiveRecord::Schema.define(version: 2019_06_30_201022) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.integer "memes_count"
-    t.integer "posts_count"
-    t.integer "comments_count"
+    t.integer "memes_count", default: 0
+    t.integer "posts_count", default: 0
+    t.integer "comments_count", default: 0
     t.integer "swipe_up", default: 0
     t.integer "swipe_down", default: 0
     t.integer "swipe_left", default: 0

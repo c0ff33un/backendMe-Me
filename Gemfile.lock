@@ -804,12 +804,12 @@ GEM
     byebug (11.0.1)
     case_transform (0.2)
       activesupport
+    chronic (0.10.2)
     color_pound_spec_reporter (0.0.9)
       bundler
       minitest
       minitest-reporters (>= 0.14.24)
       rake
-    chronic (0.10.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     devise (4.6.2)
@@ -847,6 +847,8 @@ GEM
       mime-types (>= 1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gruff (0.7.0)
+      rmagick (~> 2.13, >= 2.13.4)
     httparty (0.17.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -933,6 +935,7 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
+    rmagick (2.16.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     serializer (1.0.2)
@@ -986,6 +989,7 @@ DEPENDENCIES
   dotenv-rails
   faker (~> 1.9, >= 1.9.3)
   file_validators
+  gruff
   httparty
   listen (>= 3.0.5, < 3.2)
   mini_magick
