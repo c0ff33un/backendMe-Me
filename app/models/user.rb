@@ -93,17 +93,37 @@ class User < ApplicationRecord
 		}
 	end
 
+	# Used to make fun of the user
+	def memer_degree
+		stats = self.stats
+		if stats[:general_stats].values.inject(0,:+) == 0
+			return "Boring memer"
+		end
+		nouns = {
+			"replier" => stats[:general_stats][:comments_count], 
+			"memer" => stats[:general_stats][:memes_count], 
+			"reposter" => stats[:general_stats][:posts_count], 
+			"reacter" => stats[:general_stats][:reactions_count]
+		}
+		adjectives = {swipe_up: "Wholesome", swipe_down: "Normie", swipe_left: "Dank", swipe_right: "Boring"}
+
+		user_noun = nouns.max_by{|k,v| v }[0]
+		user_adjective = (stats[:general_stats][:reaction_counts])? adjectives[stats[:reactions_stats].max_by{|k,v| v }[0]] : "Boring"
+		user_adjective + " " + user_noun
+	end
+	
+	
 	private 
 
-		def birthday_in_range
-			birthday.inspect
-			if birthday > Time.now
-				errors.add(:birthday, "the future is now, old man")
-			elsif birthday < Time.now - 125.years
-				errors.add(:birthday, "too old for our memes")
-			elsif birthday > Time.now - 15.years
-				errors.add(:birthday, "too young for our memes")
-			end
+	def birthday_in_range
+		birthday.inspect
+		if birthday > Time.now
+			errors.add(:birthday, "the future is now, old man")
+		elsif birthday < Time.now - 125.years
+			errors.add(:birthday, "too old for our memes")
+		elsif birthday > Time.now - 15.years
+			errors.add(:birthday, "too young for our memes")
 		end
+	end
 
 end

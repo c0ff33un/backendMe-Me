@@ -3,14 +3,14 @@ class UserStatsPdf < Prawn::Document
     super()
     @user = user
     @stats = stats
-    render
+    stats_pdf
   end
 
-  def render
+  def stats_pdf
     text "User Statistics", size: 30
     text "Basic Information", size: 20
-    basic_info = make_table user_info, cell_style: {borders: []}
-    img = (@user.avatar.attached?)? rails_blob_url(@user.avatar) : "app/assets/default_profile_img.jpg"
+    basic_info = make_table user_array, cell_style: {borders: []}
+    img = (@user.avatar.attached?)? rails_blob_url(@user.avatar) : "app/assets/images/default_profile_img.jpg"
     table([[basic_info, {image: img, fit: [130, 130], position: :center}]], 
       column_widths: {0=>590, 1 => 150}, 
       cell_style: {borders: []}
@@ -40,7 +40,7 @@ class UserStatsPdf < Prawn::Document
     end
   end
 
-  def user_info
+  def user_array
     [["Handle:", @user.handle],
       ["Email:", @user.email],
       ["Birthday:",@user.birthday],

@@ -12,6 +12,11 @@ class UserStatsController < ApplicationController
 		end
 	end
 
+	def certificate
+		pdf = UserCertificatePdf.new(current_user)
+		send_data pdf.render, filename: 'certificate.pdf', type: 'application/pdf'
+	end
+
 	def best_memes
 		render json: current_user.best_memes , status: :ok   
 	end
