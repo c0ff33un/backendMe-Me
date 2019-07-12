@@ -76,11 +76,15 @@ class User < ApplicationRecord
 	end
 
 	def stats
+		reactions_total = self.swipe_up + self.swipe_down + self.swipe_left + self.swipe_right
 		stats = { 
-			comments_count: self.comments_count,
-			memes_count: self.memes_count,
-			posts_count: self.posts_count,
-			reaction_count: {
+			general_stats:{
+				comments_count: self.comments_count,
+				memes_count: self.memes_count,
+				posts_count: self.posts_count,
+				reactions_count: reactions_total
+			},
+			reactions_stats: {
 				swipe_up: self.swipe_up,
 				swipe_down: self.swipe_down,
 				swipe_left: self.swipe_left,
