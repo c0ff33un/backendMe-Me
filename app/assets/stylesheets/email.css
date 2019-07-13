@@ -1,0 +1,26 @@
+#email-wrapper {
+  background: #EDEDED;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+#email-wrapper #header {
+  background: #D77373;
+  margin: 30px 30px 0px 30px;
+  padding: 5px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#email-wrapper #header .logo {
+  width: 30px;
+  height: auto;
+}
+#email-wrapper #body {
+  background: white;
+  margin: 0px 30px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  padding-bottom: 15px;
+  border: 1px solid #D77373;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
