@@ -43,6 +43,7 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 ### Mailer
 * [sendgrid on production](https://stackoverflow.com/questions/44417596/action-mailer-production-rb-not-working-when-deployed-via-sendgrid-and-heroku)
 * [letter_opener gem, preview emails](https://github.com/ryanb/letter_opener)
+* [Templates for mailers](https://foundation.zurb.com/emails/getting-started.html)
 
 ### AWS rekognition API
 *We use this api to filter out images with sexual content*
