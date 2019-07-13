@@ -36,6 +36,6 @@ class UserCertificatePdf < Prawn::Document
       text @user.memer_degree, size: 70, align: :center
       text "Generated on #{Date.today.to_s}", size: 20,align: :center
     end
-    image "/home/mah/Git/backendMe-Me/app/assets/images/seal.png", at: [700,200]
+    image "app/assets/images/seal.png", at: [700,200]
   end
 end
