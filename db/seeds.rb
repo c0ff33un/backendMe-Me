@@ -3,9 +3,20 @@ require 'open-uri'
 
 #Progress bar
 
-progressbar = ProgressBar.create(total:100, :format => '%a |%b>>%i| %p%% %t')
+amounts = {
+	users: 1,
+	memes: 20,
+	templates: 0,
+	posts: 0,
+	reactions: 20,
+	comments: 0
+}
+total = amounts.values.inject(0,:+)
+progressbar = ProgressBar.create(total: total, :format => '%a |%b>>%i| %p%% %t')
+
+
 #Fill User
-10.times do |n|
+amounts[:users].times do |n|
 	user = User.new
 	user.handle = Faker::Internet.unique.username(5..20)
 	user.email = Faker::Internet.unique.email
@@ -18,7 +29,7 @@ end
 
 
 #Fill Meme 
-20.times do |n|
+amounts[:memes].times do |n|
 	meme = Meme.new
 	meme.user_id = rand(User.count) + 1
 	meme.image.attach({io: open(Faker::Avatar.image), filename: "#{n}_faker_image.jpg"})
@@ -27,7 +38,7 @@ end
 end
 
 #Fill Template
-15.times do |n|
+amounts[:templates].times do |n|
 	template = Template.new
 	template.description = Faker::Lorem.paragraph,
 	template.image.attach({io: open(Faker::Avatar.image), filename: "#{n}_faker_image.jpg"})
@@ -36,7 +47,7 @@ end
 end
 
 #Fill Post
-15.times do
+amounts[:posts].times do
 	memes = []
 	rand(1..10).times do
 		memes<<{meme_id: rand(Meme.count)+1, body: Faker::Lorem.paragraph}
@@ -50,7 +61,7 @@ end
 end
 
 #Fill Reaction
-20.times do
+amounts[:reactions].times do
 	Reaction.create(
 		user_id: rand(User.count) + 1,
 		meme_id: rand(Meme.count) + 1,
@@ -61,7 +72,7 @@ end
 
 
 #Fill Comments
-20.times do
+amounts[:comments].times do
 	post = Post.order('RANDOM()').first
 	post.comments.create(
 		user_id: rand(User.count) + 1,

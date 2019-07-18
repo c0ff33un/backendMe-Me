@@ -104,3 +104,6 @@ gem 'whenever', require: false
 # Gems to manage css and styles
 gem 'nokogiri'
 gem 'premailer-rails'
+
+# Random queries, because i'm lazy enough to test it locally
+gem 'randumb'

@@ -27,6 +27,7 @@ class ReactionsController < ApplicationController
 		reaction = current_user.reactions.find(params[:id])
 		if reaction.update(reaction_params)
 			render json: reaction, status: :ok
+			RecalcultateScoresJob.perform_later reaction.meme
 		else
 			render json: reaction.errors, status: :unprocessable_entity
 		end

@@ -40,18 +40,37 @@ class Meme < ApplicationRecord
   has_many :comments, as: :commentable, dependent: :destroy
   #has_many :users, through: :reactions
 
+
+
+  # Recalculate meme score based on Wilson Score
+  # http://www.akitaonrails.com/2016/10/31/ruby-on-rails-implementation-of-a-proper-ranking-popularity-system
+  
+  def re_score!
+    _p = 2*swipe_up + swipe_right
+    _n = 2*swipe_down + swipe_left
+    if _p + _n == 0 
+      s = 0
+    else
+      s = (((_p + 1.9208) / (_p + _n) -1.96 * Math.sqrt((_p * _n) / (_p + _n) + 0.9604) / (_p + _n)) / (1 + 3.8416 / (_p + _n)))*1000000
+      s.round
+    end
+    self.score = s
+    self.save
+  end
+
   #Queries
-  def self.filter( upload_date = Time.use_zone(Time.zone.name) { 1.week.ago }, page = 1 ) 
+  
+  #Filter by date
+  def self.filter( upload_date = Time.use_zone(Time.zone.name) { 1.week.ago }) 
     self.not_hidden.where(created_at:(upload_date..Time.zone.now))
   end
 
   def self.best
-    self.not_hidden.left_joins(:reactions).group(:id).order('COUNT(reactions.id) DESC')
+    self.filter( upload_date = Time.use_zone(Time.zone.name) { 1.month.ago }).order_by_rand_weighted(:score)
   end
 
   def self.hot
-    self.not_hidden.left_joins(:reactions).group(:id).
-    order("AVG( strftime('%Y%m%d', reactions.created_at )) DESC")
+    self.filter.order_by_rand_weighted(:score)
   end
 
   def self.newest

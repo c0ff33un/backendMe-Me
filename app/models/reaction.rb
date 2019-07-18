@@ -33,15 +33,11 @@ class Reaction < ApplicationRecord
     def update_counter
       reaction = @@type[self.reaction_type]
       self.meme.update({reaction.to_sym => self.meme[reaction.to_sym]+1})
-      if reaction !='report'
-        self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1})
-      end
+      self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1}) unless reaction == 'report'
     end
     def decrease_counter
       reaction = @@type[self.reaction_type_was]
       self.meme.update({reaction.to_sym => self.meme[reaction.to_sym]-1})
-      if reaction !='report'
-        self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1})
-      end
+      self.user.update({reaction.to_sym => self.user[reaction.to_sym]+1}) unless reaction == 'report'
     end
   end
