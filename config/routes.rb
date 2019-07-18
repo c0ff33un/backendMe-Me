@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :posts
     member do
       get 'stats', to: 'user_stats#stats'
+      get 'certificate', to: 'user_stats#certificate'
       get 'best_memes', to: 'user_stats#best_memes'
       get 'best_posts', to: 'user_stats#best_posts'
     end

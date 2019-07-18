@@ -76,25 +76,58 @@ class User < ApplicationRecord
 	end
 
 	def stats
+		reactions_total = self.swipe_up + self.swipe_down + self.swipe_left + self.swipe_right
+		general_stats = {
+			comments_count: self.comments_count,
+			memes_count: self.memes_count,
+			posts_count: self.posts_count,
+			reactions_count: reactions_total
+		}
+		reactions_stats = {
+			swipe_up: self.swipe_up,
+			swipe_down: self.swipe_down,
+			swipe_left: self.swipe_left,
+			swipe_right: self.swipe_right
+		}
+		general_stats.each{|k,v| general_stats[k]= 0 unless v}
+		reactions_stats.each{|k,v| reactions_stats[k]= 0 unless v}
 		stats = { 
-			:comments => self.comments.length,
-			:own_memes => self.memes.length,
-			:own_posts => self.posts.length,
-			:reactions => self.reactions.length
+			general_stats: general_stats,
+			reactions_stats: reactions_stats
 		}
 	end
 
+	# Used to make fun of the user
+	def memer_degree
+		stats = self.stats
+		if stats[:general_stats].values.inject(0,:+) == 0
+			return "Boring memer"
+		end
+		nouns = {
+			"replier" => stats[:general_stats][:comments_count], 
+			"memer" => stats[:general_stats][:memes_count], 
+			"reposter" => stats[:general_stats][:posts_count], 
+			"reacter" => stats[:general_stats][:reactions_count]
+		}
+		adjectives = {swipe_up: "Wholesome", swipe_down: "Normie", swipe_left: "Dank", swipe_right: "Boring"}
+
+		user_noun = nouns.max_by{|k,v| v }[0]
+		user_adjective = (stats[:general_stats][:reaction_counts])? adjectives[stats[:reactions_stats].max_by{|k,v| v }[0]] : "Boring"
+		user_adjective + " " + user_noun
+	end
+	
+	
 	private 
 
-		def birthday_in_range
-			birthday.inspect
-			if birthday > Time.now
-				errors.add(:birthday, "the future is now, old man")
-			elsif birthday < Time.now - 125.years
-				errors.add(:birthday, "too old for our memes")
-			elsif birthday > Time.now - 15.years
-				errors.add(:birthday, "too young for our memes")
-			end
+	def birthday_in_range
+		birthday.inspect
+		if birthday > Time.now
+			errors.add(:birthday, "the future is now, old man")
+		elsif birthday < Time.now - 125.years
+			errors.add(:birthday, "too old for our memes")
+		elsif birthday > Time.now - 15.years
+			errors.add(:birthday, "too young for our memes")
 		end
+	end
 
 end

@@ -40,6 +40,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
+  gem "letter_opener"
 end
 
 group :test, :production do
@@ -86,6 +87,7 @@ gem 'file_validators' # Cool gem
 # pdf generation
 gem 'prawn'
 gem 'prawn-table'
+gem 'gruff'
 
 # progress bar gem, because we want to know how long does seeding lasts
 gem 'progressbar'
@@ -98,3 +100,7 @@ gem 'aws-sdk'
 
 # Cron jobs
 gem 'whenever', require: false
+
+# Gems to manage css and styles
+gem 'nokogiri'
+gem 'premailer-rails'

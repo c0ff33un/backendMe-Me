@@ -33,9 +33,17 @@ For development a .env file in root folder with DEVISE_JWT_SECRET_KEY defined is
 * [basic devise-jwt config step 2](https://github.com/waiting-for-dev/devise-jwt)
 * [advanced custom devise controller](https://thinkster.io/tutorials/rails-json-api/setting-up-users-and-authentication-for-our-api)
 
-### Mailer
+### PDFS
+* [prawn](https://github.com/prawnpdf/prawn)
+* [gruff, library to generate graphs](https://github.com/topfunky/gruff)
+* [rmagick, we need it to use gruff](https://github.com/rmagick/rmagick)
+* [Thread that explains how to use gruff alongside prawn](https://stackoverflow.com/questions/13071344/graphics-with-prawn)
 
+*Note: it is necessary to satisfy some rmagick dependencies on the server, otherwise rmagick won't work*
+### Mailer
 * [sendgrid on production](https://stackoverflow.com/questions/44417596/action-mailer-production-rb-not-working-when-deployed-via-sendgrid-and-heroku)
+* [letter_opener gem, preview emails](https://github.com/ryanb/letter_opener)
+* [Templates for mailers](https://foundation.zurb.com/emails/getting-started.html)
 
 ### AWS rekognition API
 *We use this api to filter out images with sexual content*
