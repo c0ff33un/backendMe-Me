@@ -12,12 +12,15 @@
 #
 
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :handle, :body, :created_at, :edited 
+  attributes :id, :user, :body, :created_at, :edited 
   def edited
     self.object.created_at != self.object.updated_at
   end
-  def handle
-    self.object.user.handle
+  def user
+    {
+      id: self.object.user.id,
+      handle: self.object.user.handle
+    }
   end
 end
 
