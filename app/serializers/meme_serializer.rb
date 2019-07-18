@@ -17,11 +17,15 @@ class MemeSerializer < ActiveModel::Serializer
 	attributes :id, :creator, :reaction_counts
 	attribute :img, if: -> {rule == 'FULL_SIZE'}
   attribute :thumbnail, if: -> {rule == 'THUMBNAIL'}
-	
+	attribute :reaction_signed_user, if: -> {current_user}
 	def rule
     rule = (instance_options[:rule])? instance_options[:rule].upcase.to_s : 'THUMBNAIL'
   end
 	
+	def current_user
+		current_user = instance_options[:current_user]
+	end
+
 	def creator
 		{
 			id: object.user.id,
@@ -30,6 +34,10 @@ class MemeSerializer < ActiveModel::Serializer
 		}
 	end
 
+	def reaction_signed_user
+		reaction = Reaction.find_by(user_id: current_user.id, meme_id: object.id)
+		reaction[:reaction_type] if reaction
+	end
 	def img
     rails_blob_url(object.image) if object.image.attached?
 	end

@@ -13,7 +13,13 @@ class MemesController < ApplicationController
 
 	def show
 		meme = Meme.find(params[:id])
-		render json: meme, rule: :full_size, status: :ok
+		if user_signed_in?
+			reaction = Reaction.find_by(user_id: current_user.id, meme_id: meme.id)
+			reaction_signed_user = reaction[:reaction_type] if reaction
+			render json: meme, rule: :full_size, status: :ok, current_user: current_user
+		else
+			render json: meme, rule: :full_size, status: :ok
+		end
 	end
 
 	def create
